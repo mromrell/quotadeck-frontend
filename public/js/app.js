@@ -26,7 +26,7 @@ var roApp = angular.module('roApp', [
                 controller: 'MyAccountProfileController',
                 title: 'My Account Profile'
             })
-            .when('/jobChatRoom', {
+            .when('/jobChatRoom/:id', {
                 templateUrl: 'partials/jobChatRoom.html',
                 controller: 'jobChatRoomController',
                 title: 'Chat with your new salesperson'
@@ -51,7 +51,7 @@ var roApp = angular.module('roApp', [
                 controller: 'JobOfferController',
                 title: 'Send a job offer'
             })
-            .when('/browseApplicants', {
+            .when('/browseApplicants/:id', {
                 templateUrl: 'partials/browseApplicants.html',
                 controller: 'browseApplicantsController',
                 title: 'Browse Applicants'
