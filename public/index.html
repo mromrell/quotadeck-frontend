@@ -2,7 +2,7 @@
 <html lang="en" ng-app="roApp" ng-controller="BaseController">
     <head>
         <meta charset="utf-8">
-        <title ng-bind="title">Default Title</title>
+        <title ng-bind="title">Quote Deck</title>
         <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" href="css/app.css"/>
 
@@ -30,30 +30,24 @@
                         <li class="active"><a href="#/home">Home</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Dropdown <b class="caret"></b>
+                                My Account  <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
+                                <li><a href="index.html#/accountProfile">View My Account</a></li>
+                                <li><a href="javascript:void(0);" ng-click="doLogout();" ng-show="session">Logout</a></li>
+                                <li><a href="index.html#/createEvent">Add a Sales Target</a></li>
                                 <li class="divider"></li>
                                 <li class="dropdown-header">Nav header</li>
                                 <li><a href="#">Separated link</a></li>
                                 <li><a href="#">One more separated link</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
-                                    class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Another action</a></li>
-                                <li><a href="#">Something else here</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
+
+                        <li class="dropdown" ng-hide="session">
+                            <a href="index.html#/register">Sign Up</a>
+                        </li>
+                        <li class="dropdown" ng-hide="session">
+                            <a href="index.html#/accountProfile">Login</a>
                         </li>
                     </ul>
 

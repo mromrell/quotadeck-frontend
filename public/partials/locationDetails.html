@@ -1,0 +1,136 @@
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <a href="#" class="list-group-item active">See Map</a>
+                <div id="map-canvas"></div>
+                <div class="list-group-item">
+                    {{ location.street }}<br/>
+                    {{ location.city }}, {{ location.state }}<br/>
+                    {{ location.country }}<br/>
+                </div>
+
+                <a class="list-group-item active">{{ location.eventStartDate | date:'fullDate' }}</a>
+                <div ui-calendar="uiConfig.calendar" class="center" ng-model="eventSources"></div>
+
+                <a class="list-group-item active">Sign up for this event</a>
+                <div class="list-group-item">
+                    <h4>Register now: ${{ location.participantCost }}</h4>
+                    <p><strong>Pledge your support to this Event by Pre-registering.</strong>If the event never hits it's goal of {{ location.totalCost }} then you don't get charged!</p>
+                    <hr/>
+                    <div ng-include="paymentForm"></div>
+                </div>
+
+                <a href="#/editLocation/{{ location.id }}" ng-show="showEdit" class="list-group-item active"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon-class"></span> Edit Event</a>
+
+            </div>
+        </div>
+        <div class="col-md-9">
+            <!-- <div ng-include src="locationspecific"></div> -->
+
+            <div class="thumbnail">
+                <img class="img-responsive" src="{{ photo_url }}" alt="">
+
+                <div class="row caption-full">
+                    <div class="col-sm-1">
+                        <div class="center">
+                            <button type="button" class="btn btn-default-nobord btn-xs fullwidth" ng-click="countChoculaUp(location)"><span class="glyphicon glyphicon-chevron-up"></span></button><br/>
+                            <p class="votecount">{{location.voteCount}}</p><br/>
+                            <button type="button" class="btn btn-default-nobord btn-xs fullwidth" ng-click="countChoculaDown(location)"><span class="glyphicon glyphicon-chevron-down"></span></button><br/>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-11">
+                        <div class="row">
+                            <div class="col-md-10 pull-left">
+                                <h1><a class="vert-center">{{ location.eventName }}</a></h1>
+                            </div>
+                            <div class="col-md-2 pull-right">
+                                <button type="button" class="btn btn-warning pull-right vert-center" ng-click="starLocation(location)"><span class="watcher">Watch this Event</span>
+                                    <span class="glyphicon glyphicon-star-empty" ng-hide="location.starLocation"></span>
+                                    <span class="glyphicon glyphicon-star" ng-show="location.starLocation"></span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                        <div class="progress progress-striped p2">
+                            <div class="progress-bar progress-bar-success pb2" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{ location.totalPledged / location.totalCost * 100 }}%">
+                                <span class="">{{ location.totalPledged / location.totalCost * 100 | number:1 }}% Funded</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <span class="center"><!--
+                                <div class="pull-left">
+
+                                </div>
+                                <div class="pull-left">
+
+                                </div>
+                                <div class="pull-left">
+
+                                </div>-->
+                                <h2 class="inline">146</h2> Backers <h2 class="inline">{{ location.totalPledged | currency}}</h2> Pledged | Goal is <strong>{{ location.totalCost | currency}}</strong> <h2 class="inline">12</h2> Days Left</span>
+                        </div>
+                        <br/>
+                        <hr/>
+                        <p>{{ location.description }}</p>
+                         <hr/>
+                </div>
+
+
+
+                <div class="caption-full">
+                    <form ng-submit="save()" class="form-register">
+                        <div class="form-group">
+                            <input class="form-control" id="commentText" type="text" ng-model="commentText"
+                                   required="required" placeholder="Comment on this Place">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="locationRating" value="0" type="hidden" ng-model="locationRating">
+                            <input class="form-control" id="user" value="testrobot" type="hidden" ng-model="user">
+                        </div>
+
+                    <div class="row">
+                        <div class="col-sm-10" ng-show="session">
+                        <button type="submit" class="btn btn-success" value="Save">Create Comment</button>
+                        </div>
+
+                        <div class="col-sm-2 ratings">
+                           <p class="center">{{ commentList.length }} Comments</p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    </form>
+
+                    <div class="row" ng-repeat="comment in commentList">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading-comment"><p>{{ comment.username }}<span class="pull-right">{{ comment.commentDate | date:'MM/dd/yyyy'}}</span></p></div>
+                                <div class="panel-body">
+                                  <p>{{ comment.commentText }}</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+
+    </div>
+
+</div>
+
+</div>
