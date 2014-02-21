@@ -36,6 +36,11 @@ var roApp = angular.module('roApp', [
                 controller: 'leaveRatingController',
                 title: 'leave a Rating'
             })
+            .when('/login', {
+                templateUrl: 'partials/login.tpl.html',
+                controller: 'LoginController',
+                title: 'Log in'
+            })
             .when('/createJob', {
                 templateUrl: 'partials/createJob.html',
                 controller: 'CreateJobController',

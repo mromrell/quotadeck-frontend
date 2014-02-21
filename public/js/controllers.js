@@ -21,6 +21,15 @@ angular.module('roApp.controllers', [])
             $scope.session = SessionService.getSession();
         });
     }])
+    .controller('LoginController', ['$scope', 'SessionService', 'Restangular', function($scope, SessionService, Restangular) {
+        $scope.session = SessionService.getSession();
+        $scope.user = {};
+
+        $scope.$on('event:login-confirmed', function () {
+            console.log('event has been broadcast to Home Controller');
+            $scope.session = SessionService.getSession();
+        });
+    }])
 
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
