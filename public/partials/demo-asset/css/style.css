@@ -1,0 +1,111 @@
+.cos-wrapper {
+        position: fixed;
+        z-index: 9999999;
+        top: 110px;
+        left: -180px;
+    }
+    .cos-trigger {
+        position: relative;
+        background: #444;
+        float: right;
+        padding: 10px 15px;
+        color: #FFF;
+        font-size: 20px;
+        cursor: pointer;
+        height: 40px;
+        width: 40px;
+        border-radius: 0 25px 25px 0;
+    }
+    .cos-trigger i {
+        position: absolute;
+        left: 8px;
+        -moz-transition: all 1s ease-in-out;
+        -webkit-transition: all 1s ease-in-out;
+        -o-transition: all 1s ease-in-out;
+        -ms-transition: all 1s ease-in-out;
+        transition: all 1s ease-in-out;
+    }
+    .cos-trigger:hover i {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    .cos-body {
+        position: relative;
+        background: #444;
+        float: left;
+        padding: 15px 15px;
+        width: 180px;
+    }
+    .cos-body span {
+        font-size: 12px;
+        font-weight: bold;
+        color: #E5E5E5;
+        margin-bottom: 10px;
+        display: block;
+        letter-spacing: 1px;
+    }
+    .ch-color {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .ch-color li {
+        display: block;
+        float: left;
+    }
+    .ch-color li.aktif a {
+        box-shadow: 0 0 0 3px #222;
+    }
+    .ch-color li a {
+        width: 20px;
+        height: 20px;
+        margin: 2px 5px;
+        content:' ';
+        position: relative;
+        display: inline-block;
+    }
+    a[data-css='green'] {
+        background: #8FC25D;
+    }
+    a[data-css='blue'] {
+        background: #26CBE0;
+    }
+    a[data-css='orange'] {
+        background: #f85c37;
+    }
+    a[data-css='purple'] {
+        background: #B197DE;
+    }
+    a[data-css='pink'] {
+        background: #FF5454;
+    }
+    a[data-css='red'] {
+        background: #d62727;
+    }
+    a[data-css='brown'] {
+        background: #D1B179;
+    }
+    a[data-css='dgreen'] {
+        background: #00B318;
+    }
+    a[data-css='dblue'] {
+        background: #199DD1;
+    }
+    a[data-css='sgreen'] {
+        background: #2CDE97;
+    }
+    a[data-css='kblue'] {
+        background: #8199A3;
+    }
+    a[data-css='kbrown'] {
+        background: #A39381;
+    }
+    a[data-css='yellow'] {
+        background: #ffd800;
+    }
+    a[data-css='maroon'] {
+        background: #873D3D;
+    }
