@@ -64,7 +64,7 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
-    .controller('AccountProfileController', ['$scope', 'SessionService', 'Restangular', function($scope, SessionService, Restangular) {
+    .controller('MyAccountProfileController', ['$scope', 'SessionService', 'Restangular', function($scope, SessionService, Restangular) {
         $scope.session = SessionService.getSession();
         $scope.currentUserInfo = SessionService.getSession();
 
@@ -121,7 +121,7 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
-    .controller('CreateEventController', ['$scope', 'SessionService', 'Restangular', '$window', '$http', function ($scope, SessionService, Restangular, $window, $http) {
+    .controller('CreateJobController', ['$scope', 'SessionService', 'Restangular', '$window', '$http', function ($scope, SessionService, Restangular, $window, $http) {
         $scope.new_event = {};
         $scope.session = SessionService.getSession();
 
@@ -191,7 +191,7 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
-    .controller('LocationDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+    .controller('JobDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
         $scope.session = SessionService.getSession();
         //to display images from Home page
         $scope.paymentForm = 'partials/paymentForm.html';
@@ -329,4 +329,25 @@ angular.module('roApp.controllers', [])
             .then(function (data) {
                 $scope.commentList = data;
             });
+    }])
+    .controller('FindJobController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('browseApplicantsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('jobChatRoomController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('jobOfferController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('leaveRatingController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('salesRepDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('companyDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
     }]);

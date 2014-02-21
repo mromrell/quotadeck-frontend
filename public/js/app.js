@@ -21,21 +21,56 @@ var roApp = angular.module('roApp', [
                 controller: 'RegisterController',
                 title: "Create an Account"
             })
-            .when('/accountProfile', {
-                templateUrl: 'partials/accountProfile.html',
-                controller: 'AccountProfileController',
-                title: 'Account Profile'
+            .when('/myAccountProfile', {
+                templateUrl: 'partials/myAccountProfile.html',
+                controller: 'MyAccountProfileController',
+                title: 'My Account Profile'
             })
-            .when('/createEvent', {
-                templateUrl: 'partials/createEvent.html',
-                controller: 'CreateEventController',
-                title: 'Create a Event'
+            .when('/jobChatRoom', {
+                templateUrl: 'partials/jobChatRoom.html',
+                controller: 'jobChatRoomController',
+                title: 'Chat with your new salesperson'
             })
-            .when('/locationDetails/:id', {
-                templateUrl: 'partials/locationDetails.html',
-                controller: 'LocationDetailsController',
-                title: 'Location Details',
+            .when('/leaveRating', {
+                templateUrl: 'partials/leaveRating.html',
+                controller: 'leaveRatingController',
+                title: 'leave a Rating'
+            })
+            .when('/createJob', {
+                templateUrl: 'partials/createJob.html',
+                controller: 'CreateJobController',
+                title: 'Create a Job'
+            })
+            .when('/findJob', {
+                templateUrl: 'partials/findJob.html',
+                controller: 'FindJobController',
+                title: 'Find a Job'
+            })
+            .when('/jobOffer', {
+                templateUrl: 'partials/jobOffer.html',
+                controller: 'JobOfferController',
+                title: 'Send a job offer'
+            })
+            .when('/browseApplicants', {
+                templateUrl: 'partials/browseApplicants.html',
+                controller: 'browseApplicantsController',
+                title: 'Browse Applicants'
+            })
+            .when('/JobDetails/:id', {
+                templateUrl: 'partials/JobDetails.html',
+                controller: 'JobDetailsController',
+                title: 'Job Details',
                 locationspecific:'locationSpecific.html'
+            })
+            .when('/companyDetails/:id', {
+                templateUrl: 'partials/companyDetails.html',
+                controller: 'companyDetailsController',
+                title: 'company Details'
+            })
+            .when('/salesRepDetails/:id', {
+                templateUrl: 'partials/salesRepDetails.html',
+                controller: 'salesRepDetailsController',
+                title: 'sales Rep Details'
             })
             .when('/index', {
                 templateUrl: 'partials/index.html',
