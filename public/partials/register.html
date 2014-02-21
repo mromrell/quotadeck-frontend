@@ -2,9 +2,27 @@
      <div class="starter-template center">
         <h1>Company Account registration</h1>
 
-        <p class="lead">Create a free QuoteDeck account</p>
+
+<!-- ------- This Page was copied from another project and needs to be reworked -------- -->
+
+
+
+<div class="container">
+
+    <div class="starter-template center">
+        <h1>Account registration</h1>
+
+        <p class="lead">Create a free Quote Deck account</p>
 
         <form novalidate role="form" name="registerForm" ng-submit="doRegister()" style="max-width: 300px;" ng-disabled="disabled" class="css-form form-register center">
+            <!--
+                <input type="text" name="email" ng-model="user.email" placeholder="Email Address" required="required" class="form-control form-group"/>
+            -->
+                <input type="text" name="username" ng-model="user.username" placeholder="User Name" required="required" class="form-control form-group"/>
+                <input type="text" name="first_name" ng-model="user.firstname" placeholder="First name" required="required" class="form-control form-group"/>
+                <input type="text" name="last_name" ng-model="user.lastname" placeholder="Last name" required="required" class="form-control form-group"/>
+                <input type="text" name="email" ng-model="email" placeholder="Email" required="required" class="form-control form-group"/>
+                <input type="text" name="emailconfirm" ng-model="user.email" placeholder="Confirm Email" required="required" class="form-control form-group"/>
 
                 <input type="text" name="companyName" ng-model="company.companyName" placeholder="Company Name" required="required" class="form-control form-group"/>
                 <input type="text" name="street" ng-model="company.street" placeholder="Street" required="required" class="form-control form-group"/>
@@ -32,3 +50,5 @@
         </a>
         </form>
     </div>
+
+</div>
