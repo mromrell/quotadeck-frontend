@@ -68,7 +68,41 @@
     <!--BEGIN PAGE BODY-->
     <section class="pageBody container">
         <!--CONTENT GOES HERE-->
-    
+     <div class="starter-template center">
+        <h1>Company Account registration</h1>
+
+        <p class="lead">Create a free QuoteDeck account</p>
+
+        <form novalidate role="form" name="registerForm" ng-submit="doRegister()" style="max-width: 300px;" ng-disabled="disabled" class="css-form form-register center">
+
+                <input type="text" name="companyName" ng-model="company.companyName" placeholder="Company Name" required="required" class="form-control form-group"/>
+                <input type="text" name="street" ng-model="company.street" placeholder="Street" required="required" class="form-control form-group"/>
+                <input type="text" name="city" ng-model="company.city" placeholder="City" required="required" class="form-control form-group"/>
+                <input type="text" name="state" ng-model="company.state" placeholder="State" required="required" class="form-control form-group"/>
+                <input type="text" name="zip" ng-model="company.zip" placeholder="Zip" required="required" class="form-control form-group"/>
+                <input type="text" name="zip" ng-model="company.zip" value="United States" placeholder="Country" required="required" class="form-control form-group"/>
+                <input type="text" name="phone" ng-model="company.phone" placeholder="Phone" required="required" class="form-control form-group"/>
+                <input type="text" name="website" ng-model="company.website" placeholder="Website" required="required" class="form-control form-group"/>
+                <input type="text" name="revenue" ng-model="company.revenue" placeholder="Revenue" required="required" class="form-control form-group"/>
+                <input type="text" name="employeeCount" ng-model="company.employeeCount" placeholder="Number of employees" required="required" class="form-control form-group"/>
+                <input type="text" name="industry" ng-model="company.industry" placeholder="Industry" required="required" class="form-control form-group"/>
+                <input type="text" name="productsServices" ng-model="company.productsServices" placeholder="Products Services" required="required" class="form-control form-group"/>
+                <input type="text" name="website" ng-model="company.companyDescription" placeholder="Description" required="required" class="form-control form-group"/>
+                <input type="text" name="companyType" ng-model="company.companyType" placeholder="Company Type" required="required" class="form-control form-group"/>
+                <input type="text" name="password" placeholder="Password" required="required" class="form-control form-group"/>
+                <input type="text" name="confirmPassword" ng-model="company.password" placeholder="Confirm Password" required="required" class="form-control form-group"/>
+                
+
+
+                <input type="password" name="password" ng-model="company.password" placeholder="Password" required="required" class="form-control form-group"/>
+                <input type="password" name="passwordconfirm" ng-model="company.user.password" placeholder="Confirm Password" required="required" class="form-control form-group"/>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+            &nbsp;<a href="/">
+            <button type="button" class="btn btn-primary">Cancel</button>
+        </a>
+        </form>
+    </div>
 
     </section>
     <!--END PAGE BODY-->
