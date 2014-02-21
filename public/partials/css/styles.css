@@ -2694,3 +2694,61 @@ article.post .post_excerpt a.readmore:hover {
     -moz-transform: translateY(0px) translateX(0px);
     transform: translateY(0px) translateX(0px);
 }
+
+
+.button-white-side{
+    width: 300px;
+    font-size: 17px;
+}
+.bigHeader>p{
+    font-size: 19px;
+}
+.footerMargin{
+    padding-bottom: 0px;
+    padding-top:30px;
+    padding-top: 6px;
+}
+.credits{
+    padding: 0px; 
+}
+.navbar-default{
+    border-bottom: 2px solid #D6D6D6;
+}
+.wrapper{
+    border-left: 1px solid #D6D6D6;
+    border-right: 1px solid #D6D6D6;
+}
+.pageBody{
+    margin-top: 65px;
+}
+input{
+    padding: 8px; 
+    border-radius: 3px; 
+    border: 1px solid #CCC; 
+    background-image: none; 
+    width:270px; 
+} 
+.inputs:focus { 
+outline-color: #54B4AD; 
+} 
+
+/* Sticky footer styles START
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  overflow: hidden;
+}
+/* Sticky footer styles END
+-------------------------------------------------- */
