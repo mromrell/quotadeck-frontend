@@ -73,13 +73,180 @@
     </nav>
     <!-- END Navbar -->
 
+
+    <style type="text/css">
+        ul{
+            display: block;
+            list-style-type: disc;
+            -webkit-margin-before: 1em;
+            -webkit-margin-after: 1em;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 40px;
+        }
+        .nav-collapse.collapse {
+        display:inline;
+        }
+        ul.sidebar-menu,ul.sidebar-menu li ul.sub {
+            margin:-2px 0 0;
+            padding:0;
+        }
+        ul.sidebar-menu {
+            margin: -2px 0 0;
+            padding: 0;
+
+        }
+        #sidebar>ul>li>ul.sub {
+            display:none;
+        }
+        #sidebar .sub-menu>.sub li a {
+            padding-left:46px;
+        }
+        #sidebar>ul>li.active>ul.sub,#sidebar>ul>li>ul.sub>li>a {
+            display:block;
+        }
+        ul.sidebar-menu li ul.sub li {
+            background:#28282e;
+            margin-bottom:0;
+            margin-left:0;
+            margin-right:0;
+        }
+        ul.sidebar-menu li ul.sub li a {
+            font-size:12px;
+            padding-top:13px;
+            padding-bottom:13px;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            -ms-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            color:#aeb2b7;
+        }
+        ul.sidebar-menu li ul.sub li a:hover,ul.sidebar-menu li ul.sub li.active a {
+            color:#1fb5ad;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            -ms-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+            display:block;
+            background:#202025;
+        }
+        ul.sidebar-menu li {
+            border-bottom:1px solid rgba(255,255,255,0.05);
+        }
+        ul.sidebar-menu li.sub-menu {
+            line-height:15px;
+        }
+        ul.sidebar-menu ul.sub li {
+            border-bottom:none;
+        }
+        ul.sidebar-menu li a span {
+            display:inline-block;
+        }
+        ul.sidebar-menu li a {
+            color:#aeb2b7;
+            text-decoration:none;
+            display:block;
+            padding:18px 0 18px 25px;
+            font-size:12px;
+            outline:none;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            -ms-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+        ul.sidebar-menu li a.active,ul.sidebar-menu li a:hover,ul.sidebar-menu li a:focus {
+            background:#28282e;
+            color:#1FB5AD;
+            display:block;
+            -webkit-transition:all 0.3s ease;
+            -moz-transition:all 0.3s ease;
+            -o-transition:all 0.3s ease;
+            -ms-transition:all 0.3s ease;
+            transition:all 0.3s ease;
+        }
+        ul.sidebar-menu li {
+            font-size:15px;
+            padding-right:6px;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        ul.sidebar-menu li a:hover i,ul.sidebar-menu li a:focus i {
+            color:#1fb5ad;
+        }
+        ul.sidebar-menu li a.active i {
+            color:#1fb5ad;
+        }
+        .mail-info,.mail-info:hover {
+            margin:-3px 6px 0 0;
+            font-size: 11px;
+        }
+        .sideNavBar{
+            background: #3a3a3a; 
+            padding-left:0px; 
+            height: 100%;
+            color: #767676; 
+            font-family: 'Open Sans',sans-serif; 
+            font-size: 13px;
+            overflow: hidden; 
+            outline:none; 
+            padding-right:0px;
+        }
+        ul li{
+            list-style: none;
+            padding-right: 0px !important;
+        }
+    </style>
+    <div class="col-md-2 sideNavBar">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="" href="index-2.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+            </ul>            
+
+        </div>
+
     <!--BEGIN PAGE BODY-->
     <section class="pageBody container">
            <div ng-view></div>
     <!--CONTENT GOES HERE-->
-  
+
     </section>
-    <!--END PAGE BODY-->
 
 
     <!-- BEGIN FOOTER -->
