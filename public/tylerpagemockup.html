@@ -67,7 +67,57 @@
 
     <!--BEGIN PAGE BODY-->
     <section class="pageBody container">
-     
+     <div class="container">
+    <div ng-hide="session">
+        <div login></div>
+    </div>
+
+    <div ng-show="session" class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <h1>Create a new job</h1>
+
+            <h3></h3>
+
+            <div class="mainform">
+                <form ng-submit="save()" class="form-register">
+                    <input class="form-control form-group" type="text" ng-model="new_event.eventName" required="required" placeholder="Event Name">
+                    <div class="form-group">
+                        <label>Event Location</label>
+                        <input class="form-control form-group" type="text" ng-model="new_event.street" required="required" placeholder="Street Address">
+                        <input class="form-control form-group" type="text" ng-model="new_event.city" required="required" placeholder="City">
+                        <input class="form-control form-group" type="text" ng-model="new_event.state" required="required" placeholder="State">
+                        <input class="form-control form-group" type="text" ng-model="new_event.country" required="required" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control form-group" type="text" ng-model="new_event.description" required="required" placeholder="Description" rows="5"></textarea>
+                        <input class="form-control form-group" type="number" ng-model="new_event.totalCost" required="required" placeholder="Total Cost of the Event">
+                        <input class="form-control form-group" type="number" ng-model="new_event.participantCost" required="required" placeholder="Cost for each Participant">
+                        <input class="form-control form-group" type="text" ng-model="new_event.linkUrl" placeholder="Link to the Event Website">
+                    </div>
+                    <label class="left-align">The event start on:</label>
+                        <input class="form-control form-group" type="date" ng-model="new_event.eventStartDate" placeholder="When does the Event Start?">
+                    <label>The event ends on:</label>
+                        <input class="form-control form-group" type="date" ng-model="new_event.eventEndDate" placeholder="When does the Event End?">
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" ng-model="session.user[id]">
+                    </div>
+                    <div>Do you want to find sponsors for this event?
+                        <li class="no-decoration"><input type="checkbox" ng-model="new_event.sponsered"> Yes</li>
+                    </div>
+                    <div>Is this event for Charity?
+                        <li class="no-decoration"><input type="checkbox" ng-model="new_event.charity"> Yes</li>
+                    </div>
+                    <br/>
+                    <input type="file" ng-model="photo" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                    <div>
+                        <hr/>
+                        <button type="ng-submit" class="btn btn-success" value="Save">Create Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     </section>
     <!--END PAGE BODY-->
 
