@@ -1,79 +1,162 @@
-<!doctype html>
-<html lang="en" ng-app="roApp" ng-controller="BaseController">
-    <head>
-        <meta charset="utf-8">
-        <title ng-bind="title">Quote Deck</title>
-        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/app.css"/>
+<!DOCTYPE html>
+<html lang="en">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ascii" /><!-- /Added by HTTrack -->
+<head>
 
-        <script src="lib/angular/angular.js"></script>
-        <script src="lib/angular-route/angular-route.js"></script>
-        <script src="lib/angular-cookies/angular-cookies.min.js"></script>
-        <script src="lib/angularLocalStorage/src/angularLocalStorage.js"></script>
-        <script src="lib/underscore/underscore.js"></script>
-        <script src="lib/restangular/dist/restangular.min.js"></script>
-    </head>
-    <body>
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Develpixel">
+    <link rel="shortcut icon" href="partials/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="partials/images/favicon/favicon.ico" type="image/x-icon">
+
+    <title>QuotaDeck - Business Template</title>
+
+    <!-- PACE.JS -->
+    <script src="partials/js/library/pace.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="partials/css/bootstrap.min.css" rel="stylesheet">
+    <link href="partials/css/library/font-awesome.min.css" rel="stylesheet">
+    <link href="partials/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="partials/demo-asset/css/style.css">
+    <link href="partials/css/scheme/soft-green.css" rel="stylesheet" id="clscheme">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
+    .button-white-side{
+        width: 300px;
+        font-size: 17px;
+    }
+    .bigHeader>p{
+        font-size: 19px;
+    }
+    .footerMargin{
+        padding-bottom: 0px;
+        padding-top:30px;
+        padding-top: 6px;
+    }
+    .credits{
+        padding: 0px; 
+    }
+    .navbar-default{
+        border-bottom: 2px solid #D6D6D6;
+    }
+    .wrapper{
+        border-left: 1px solid #D6D6D6;
+        border-right: 1px solid #D6D6D6;
+    }
+    .pageBody{
+        margin-top: 65px;
+    }
+    input{
+        padding: 8px; 
+        border-radius: 3px; 
+        border: 1px solid #CCC; 
+        background-image: none; 
+        width:270px; 
+    } 
+    .inputs:focus { 
+    outline-color: #54B4AD; 
+    } 
+
+    /* Sticky footer styles START
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+    }
+    #footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      overflow: hidden;
+    }
+    /* Sticky footer styles END
+    -------------------------------------------------- */
+
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+    <div id="lazyload"></div>
+    <!-- BEGIN Navbar -->
+    <nav id="navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="wrapper">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:;">
+                    <img src="partials/images/logo.png" class="logo" alt="logo">QuotaDeck.</a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=""><a href="#home-slide">HOME</a>
+                    </li>
+                    <li class=""><a href="#about">ABOUT</a>
+                    </li>
+                    <li class=""><a href="#contact">CONTACT</a>
+                    </li>
+                    <li><a class="nav-spacer">&nbsp;</a>
+                    </li>
+                    <li><a href="#contact"><!-- TO DO DYNAMIC NAME OF PERSON LOGGED IN--></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /wrapper -->
+    </nav>
+    <!-- END Navbar -->
+
+    <!--BEGIN PAGE BODY-->
+    <section class="pageBody container">
+    </section>
+    <!--END PAGE BODY-->
+
+
+    <!-- BEGIN FOOTER -->
+    <section id="footer">
+        <div class="contact-wrapper footerMargin">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">{{ brand }}</a>
+                <div class="credits">
+                    <div class="container">
+                        <div class="row" style="padding-top:15px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <p class="credits-title">MADE WITH LOVE AT <a class="hovercolor" href="http://www.provo.startupweekend.org">STARTUP WEEKEND</a> &copy;&nbsp;2014.</p>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <p class="credits-title-link"><a class="hovercolor" href="javascript:;">Contact</a> / <a class="hovercolor" href="javascript:;">Press</a> / <a class="hovercolor" href="javascript:;">Blog</a> / <a class="hovercolor" href="javascript:;">Terms</a>
+                                </p>
+                            </div>
+                    </div>
                 </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#/home">Home</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                My Account  <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html#/accountProfile">View My Account</a></li>
-                                <li><a href="javascript:void(0);" ng-click="doLogout();" ng-show="session">Logout</a></li>
-                                <li><a href="index.html#/createJob">Add a Job</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="dropdown" ng-hide="session">
-                            <a href="index.html#/register">Sign Up</a>
-                        </li>
-                        <li class="dropdown" ng-hide="session">
-                            <a href="index.html#/accountProfile">Login</a>
-                        </li>
-                    </ul>
-
-                    <form class="navbar-form navbar-right" role="form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Search" class="form-control">
-                        </div>
-                        <button type="submit" class="btn btn-success">Search</button>
-                    </form>
-                </div>
-                <!--/.nav-collapse -->
             </div>
         </div>
+    </section>
+    <!-- END FOOTER -->
 
-        <div ng-view></div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="partials/js/library/jquery.min.js"></script>
+    <script src="partials/js/bootstrap.min.js"></script>
+    <script src="partials/js/library/smoothscroll.js"></script>
+    <script src="partials/js/main.js"></script>
+</body>
 
-        <div><a href="javascript:void(0);" ng-click="doLogout();">Logout</a></div>
-
-        <script src="js/app.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/controllers.js"></script>
-        <script src="js/constants.js"></script>
-        <script src="js/filters.js"></script>
-        <script src="js/directives.js"></script>
-
-        <script src="lib/jquery/dist/jquery.min.js"></script>
-        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    </body>
 </html>
