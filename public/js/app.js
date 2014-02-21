@@ -17,7 +17,7 @@ var roApp = angular.module('roApp', [
                 title: 'Home Page'
             })
             .when('/register', {
-                templateUrl: 'partials/register.html',
+                templateUrl: 'partials/register.tpl.html',
                 controller: 'RegisterController',
                 title: "Create an Account"
             })
