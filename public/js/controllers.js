@@ -331,23 +331,56 @@ angular.module('roApp.controllers', [])
             });
     }])
     .controller('FindJobController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
-
+         Restangular.all('job').getList()
+            .then(function (data) {
+                $scope.jobList = data;
+            });
     }])
     .controller('browseApplicantsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
+        Restangular.all('applications').getList({'jobID':$routeParams.id})
+            .then(function (data) {
+                $scope.applicationList = data;
+            });
     }])
     .controller('jobChatRoomController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
+        Restangular.all('chat').getList({'chatID':$routeParams.id})
+            .then(function (data) {
+                $scope.chatList = data;
+            });
     }])
     .controller('jobOfferController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
+        Restangular.all('applications').getList({'jobID':$routeParams.id})
+            .then(function (data) {
+                $scope.applicationList = data;
+            });
+
+        Restangular.all('chat').getList({'jobID':$routeParams.id})
+            .then(function (data) {
+                $scope.chatList = data;
+            });
     }])
     .controller('leaveRatingController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
+        Restangular.all('ratings').getList({'jobID':$routeParams.id})
+            .then(function (data) {
+                $scope.ratingList = data;
+            });
     }])
     .controller('salesRepDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+        Restangular.all('sales-user').getList({'userID':$routeParams.id})
+            .then(function (data) {
+                $scope.salesUser = data;
+            });
 
     }])
     .controller('companyDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
+        Restangular.all('company').getList({'companyID':$routeParams.id})
+            .then(function (data) {
+                $scope.company = data;
+            });
     }]);
