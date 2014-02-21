@@ -91,7 +91,7 @@ var roApp = angular.module('roApp', [
                 redirectTo: '/home'
             });
 
-            RestangularProvider.setBaseUrl('http://localhost:8001');
+            RestangularProvider.setBaseUrl('http://quotadeck-backend.herokuapp.com');
 //            RestangularProvider.setBaseUrl('http://localhost:8001');
     }])
     .run(['$location', '$rootScope', 'baseTitle', '$http', 'Restangular', 'SessionService', function ($location, $rootScope, baseTitle, $http, Restangular, SessionService) {
