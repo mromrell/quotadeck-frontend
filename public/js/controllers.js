@@ -345,7 +345,7 @@ angular.module('roApp.controllers', [])
     }])
     .controller('jobChatRoomController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
-        Restangular.all('chat').getList({'chatID':$routeParams.id})
+        Restangular.all('chat').getList({'jobID':$routeParams.id})
             .then(function (data) {
                 $scope.chatList = data;
             });
@@ -379,7 +379,11 @@ angular.module('roApp.controllers', [])
     }])
     .controller('companyDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 
-        Restangular.all('company').getList({'companyID':$routeParams.id})
+        var requestURI = window.location.hash.substr(2);  // then do a split to get the last value, then plug in that last value into the route params.ID (or similar variable)
+        var requestURIarray = requestURI.split("/");
+        var companyId = requestURIarray[1];
+        // this needs to pull in a company list first, then pick off the id of the company you want to view and assign that to a variable for that specific company
+        Restangular.all('company/'+companyId).getList()
             .then(function (data) {
                 $scope.company = data;
             });
