@@ -73,31 +73,58 @@
 
         <p class="lead">Create a free QuoteDeck account</p>
 
-        <form novalidate role="form" name="registerForm" ng-submit="doRegister()" style="max-width: 300px;" ng-disabled="disabled" class="css-form form-register center">
+        <form novalidate role="form" name="registerForm" ng-submit="doRegister()" ng-disabled="disabled" class="css-form form-register center">
 
-                <input type="text" name="companyName" ng-model="company.companyName" placeholder="Company Name" required="required" class="form-control form-group"/>
-                <input type="text" name="street" ng-model="company.street" placeholder="Street" required="required" class="form-control form-group"/>
-                <input type="text" name="city" ng-model="company.city" placeholder="City" required="required" class="form-control form-group"/>
-                <input type="text" name="state" ng-model="company.state" placeholder="State" required="required" class="form-control form-group"/>
-                <input type="text" name="zip" ng-model="company.zip" placeholder="Zip" required="required" class="form-control form-group"/>
-                <input type="text" name="zip" ng-model="company.zip" value="United States" placeholder="Country" required="required" class="form-control form-group"/>
-                <input type="text" name="phone" ng-model="company.phone" placeholder="Phone" required="required" class="form-control form-group"/>
-                <input type="text" name="website" ng-model="company.website" placeholder="Website" required="required" class="form-control form-group"/>
-                <input type="text" name="revenue" ng-model="company.revenue" placeholder="Revenue" required="required" class="form-control form-group"/>
-                <input type="text" name="employeeCount" ng-model="company.employeeCount" placeholder="Number of employees" required="required" class="form-control form-group"/>
-                <input type="text" name="industry" ng-model="company.industry" placeholder="Industry" required="required" class="form-control form-group"/>
-                <input type="text" name="productsServices" ng-model="company.productsServices" placeholder="Products Services" required="required" class="form-control form-group"/>
-                <input type="text" name="website" ng-model="company.companyDescription" placeholder="Description" required="required" class="form-control form-group"/>
-                <input type="text" name="companyType" ng-model="company.companyType" placeholder="Company Type" required="required" class="form-control form-group"/>
-                <input type="text" name="password" placeholder="Password" required="required" class="form-control form-group"/>
-                <input type="text" name="confirmPassword" ng-model="company.password" placeholder="Confirm Password" required="required" class="form-control form-group"/>
-                
-
-
-                <input type="password" name="password" ng-model="company.password" placeholder="Password" required="required" class="form-control form-group"/>
-                <input type="password" name="passwordconfirm" ng-model="company.user.password" placeholder="Confirm Password" required="required" class="form-control form-group"/>
-                
-            <button type="button" class="btn btn-primary">Submit</button>
+            <section class="row">
+                <article class="col-md-3">
+                    <div class="notification"><img src="http://developer.linkedin.com/sites/default/files/js-signin.png"></div>
+                    <span> -or-</span>
+                    <input type="text" style="margin-top:10px;" id="companyName" name="companyName" ng-model="company.companyName" placeholder="Company Name" required="required" class="form-control form-group"/>
+                    <input type="text" name="street" id="street" ng-model="company.street" placeholder="Street" required="required" class="form-control form-group"/>
+                    <input type="text" name="city" id="city" ng-model="company.city" placeholder="City" required="required" class="form-control form-group"/>
+                    <input type="text" name="state" id="state" ng-model="company.state" placeholder="State" required="required" class="form-control form-group"/>
+                    <input type="text" name="zip" id="zip" ng-model="company.zip" placeholder="Zip" required="required" class="form-control form-group"/>
+                    <input type="text" id="country" name="country" ng-model="company.country" value="United States" placeholder="Country" required="required" class="form-control form-group"/>
+                    <input type="text" id="phone" name="phone" ng-model="company.phone" placeholder="Phone" required="required" class="form-control form-group"/>
+                    <input type="text" name="website" id="website" ng-model="company.website" placeholder="Website" required="required" class="form-control form-group"/>
+                    <input type="text" name="revenue" id="revenue" ng-model="company.revenue" placeholder="Revenue" required="required" class="form-control form-group"/>
+                    <input type="text" name="employeeCount" id="employeeCount" ng-model="company.employeeCount" placeholder="Number of employees" required="required" class="form-control form-group"/>
+                    <input type="text" name="industry" id="industry" ng-model="company.industry" placeholder="Industry" required="required" class="form-control form-group"/>
+                    <input type="text" name="productServices" id="productServices" ng-model="company.productServices" placeholder="Products Services" required="required" class="form-control form-group"/>
+                    <textarea style="height:160px;" name="website" ng-model="company.companyDescription" id="website" placeholder="Description" required="required" class="form-control form-group"/></textarea>
+                    <input type="text" id="companyType" name="companyType" ng-model="company.companyType" placeholder="Company Type" required="required" class="form-control form-group"/>
+                    <input type="text" name="password" id="password" placeholder="Password" required="required" class="form-control form-group"/>
+                    <input type="text" name="confirmPassword" id="confirmPassword" ng-model="company.password" placeholder="Confirm Password" required="required" class="form-control form-group"/>
+                    
+                    <script type="text/javascript">
+                        function submitForm(){
+                            //Validate user input
+                            var phone = $('#phone').val();
+                            if(phone !== ''){
+                                phone =  phone.replace(/[()-]/g, "");
+                                phone = phone.replace(/\s+/g, '');
+                                phone = [phone.slice(0, 0), '(', phone.slice(0)].join('');
+                                phone = [phone.slice(0, 4), ') ', phone.slice(4)].join('');
+                                phone = [phone.slice(0, 9), '-', phone.slice(9)].join('');
+                            }    
+                            var companyName = $('#companyName').val();
+                            var street = $('#steet').val();
+                            var city = $('#city').val();
+                            var state = $('#state').val();
+                            var zip = $('#zip').val();
+                            var country = $('#country').val();
+                            var website = $('#website').val();
+                            var revenue = $('#revenue').val();
+                            var employeeCount = $('#employeeCount').val();
+                            var industry = $('#industry').val();
+                            var productServices= $('#productServices').val();
+                            var description = $('textarea#description').val();
+                            var companyType = $('#companyType').val();
+                            var password = $('#password').val();
+                            var confirmPassword = $('#confirmPassword').val();
+                        }
+                    </script>
+            <button onclick="submitForm();" type="button" class="btn btn-primary">Submit</button>
         </a>
         </form>
     </div>

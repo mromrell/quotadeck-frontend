@@ -2720,6 +2720,7 @@ article.post .post_excerpt a.readmore:hover {
 }
 .pageBody{
     margin-top: 65px;
+    padding-bottom:20px;
 }
 input{
     padding: 8px; 
@@ -2752,3 +2753,10 @@ body {
 }
 /* Sticky footer styles END
 -------------------------------------------------- */
+
+
+textarea { vertical-align: top; }​
+
+.notification{
+    display:none;
+}
