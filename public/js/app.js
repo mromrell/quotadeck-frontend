@@ -11,11 +11,11 @@ var roApp = angular.module('roApp', [
     ])
     .config(['$routeProvider', 'RestangularProvider', function($routeProvider, RestangularProvider) {
         $routeProvider
-//            .when('/home', {
-//                templateUrl: 'partials/home.tpl.html',
-//                controller: 'HomeController',
-//                title: 'Home Page'
-//            })
+            .when('/home', {
+                templateUrl: 'partials/home.tpl.html',
+                controller: 'HomeController',
+                title: 'Home Page'
+            })
             .when('/register', {
                 templateUrl: 'partials/register.html',
                 controller: 'RegisterController',
@@ -68,7 +68,7 @@ var roApp = angular.module('roApp', [
                 title: 'company Details'
             })
             .when('/salesRepDetails/:id', {
-                templateUrl: 'partials/salesRepDetails.html',
+                templateUrl: 'partials/salesRepDetails.tpl.html',
                 controller: 'salesRepDetailsController',
                 title: 'sales Rep Details'
             })
@@ -77,7 +77,7 @@ var roApp = angular.module('roApp', [
                 controller: 'HomeController',
                 title: 'Home Page'
             })
-            .when('/', {
+            .when('/landing', {
                 templateUrl: 'landing-page.html',
                 controller: 'HomeController',
                 title: 'QuotaDeck.com'
