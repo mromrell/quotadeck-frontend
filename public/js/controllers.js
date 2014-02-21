@@ -122,7 +122,7 @@ angular.module('roApp.controllers', [])
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
     .controller('CreateJobController', ['$scope', 'SessionService', 'Restangular', '$window', '$http', function ($scope, SessionService, Restangular, $window, $http) {
-        $scope.new_event = {};
+        $scope.newJob = {};
         $scope.session = SessionService.getSession();
 
         $scope.$on('event:login-confirmed', function () {
@@ -132,32 +132,32 @@ angular.module('roApp.controllers', [])
         });
 
         $scope.uploadFile = function (files) {
-            $scope.new_event.photos = files[0];
+            $scope.newJob.photos = files[0];
 
         };
 
         $scope.save = function () {
 
             var newEvent = {
-                'user': $scope.session.id,
-                'eventName': $scope.new_event.eventName,
-                'description': $scope.new_event.description,
-                'gpsLng': $scope.new_event.gpsLng,
-                'gpsLat': $scope.new_event.gpsLat,
-                'reliableGPS': $scope.new_event.reliableGPS,
-                'street': $scope.new_event.street,
-                'city': $scope.new_event.city,
-                'state': $scope.new_event.state,
-                'country': $scope.new_event.country,
-                'comments': $scope.new_event.comments,
-                'sponsored': $scope.new_event.sponsored,
-                'forCharity': $scope.new_event.forCharity,
-                'totalCost': $scope.new_event.totalCost,
-                'participantCost': $scope.new_event.participantCost,
-                'linkUrl': $scope.new_event.linkUrl,
-                'eventStartDate': $scope.new_event.eventStartDate,
-                'eventEndDate': $scope.new_event.eventEndDate,
-                'photo': $scope.new_event.photos
+                'user': 1, //$scope.session.id,
+                'eventName': $scope.newJob.eventName,
+                'description': $scope.newJob.description,
+                'gpsLng': $scope.newJob.gpsLng,
+                'gpsLat': $scope.newJob.gpsLat,
+                'reliableGPS': $scope.newJob.reliableGPS,
+                'street': $scope.newJob.street,
+                'city': $scope.newJob.city,
+                'state': $scope.newJob.state,
+                'country': $scope.newJob.country,
+                'comments': $scope.newJob.comments,
+                'sponsored': $scope.newJob.sponsored,
+                'forCharity': $scope.newJob.forCharity,
+                'totalCost': $scope.newJob.totalCost,
+                'participantCost': $scope.newJob.participantCost,
+                'linkUrl': $scope.newJob.linkUrl,
+                'eventStartDate': $scope.newJob.eventStartDate,
+                'eventEndDate': $scope.newJob.eventEndDate,
+                'photo': $scope.newJob.photos
             };
 
             // Grabs the GPS coordinates if it's not already there --------------------------------------------------------------------------------->
