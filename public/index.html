@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="roApp" ng-controller="BaseController">
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ascii" /><!-- /Added by HTTrack -->
 <head>
 
@@ -12,6 +12,14 @@
 
     <title>QuotaDeck - Business Template</title>
 
+        <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+    <script src="lib/angularLocalStorage/src/angularLocalStorage.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/restangular/dist/restangular.min.js"></script>
     <!-- PACE.JS -->
     <script src="partials/js/library/pace.min.js"></script>
     <!-- Bootstrap core CSS -->
@@ -125,6 +133,7 @@
 
     <!--BEGIN PAGE BODY-->
     <section class="pageBody container">
+           <div ng-view></div>
     </section>
     <!--END PAGE BODY-->
 
@@ -153,6 +162,13 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+
     <script src="partials/js/library/jquery.min.js"></script>
     <script src="partials/js/bootstrap.min.js"></script>
     <script src="partials/js/library/smoothscroll.js"></script>
