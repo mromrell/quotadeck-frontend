@@ -334,6 +334,7 @@ angular.module('roApp.controllers', [])
          Restangular.all('job').getList()
             .then(function (data) {
                 $scope.jobList = data;
+                console.log($scope.jobList);
             });
     }])
     .controller('browseApplicantsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
