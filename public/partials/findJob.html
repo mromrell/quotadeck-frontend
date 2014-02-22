@@ -27,18 +27,18 @@
             <thead>
             <tr>
                 <th>The Op</th>
-                <th>Commission</th>
                 <th>Company</th>
                 <th>Description</th>
+                <th>Commission</th>
             </tr>
             </thead>
             <tbody ng-repeat="job in jobList | filter:searchText | orderBy:predicate:reverse">
                 <tr>
                     <td><a href="#/jobDetails/{{job.id - 1}}">{{ job.jobTitle }}</a></td>
-                    <td>{{ job.jobDescription | lenLimit100 }}</td>
-                    <td>{{ job.commission }}</td>
-                    <td>{{ job.commission | currency}}</td>
                     <td>{{ job.company }}</td>
+                    <td>{{ job.jobDescription | lenLimit100 }}</td>
+                    <td>{{ job.commission | currency}}</td>
+
                 </tr>
             </tbody>
         </table>
