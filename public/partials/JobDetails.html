@@ -6,14 +6,17 @@
             <div class="list-group bs-example">
 
                 <hr/>
-                <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Old_Nike_logo.jpg/200px-Old_Nike_logo.jpg" width="175px" class="img-responsive center">
+                <img src="{{ company.imageLink }}" width="175px" class="img-responsive center">
+                <br/>
+                <div class="text-center">
                 <h4>{{ company.companyName }}</h4>
 
-                <p>{{ company.city }}
-                    <br/>{{ company.state }}
+                <p>{{ company.street }}<br/>
+                    {{ company.city }}, {{ company.state }}
                     <br/>{{ company.phone }}
                     <br/>{{ company.website }}
                 </p>
+                    </div>
                 <hr/>
                 <br/>
                 <div>
@@ -27,8 +30,14 @@
     </div>
     <div class="bs-example col-xs-12 col-sm-8 pull-right">
         <h1>{{ job.jobTitle }}</h1>
-        <p><strong>Date Posted: </strong> {{ job.dateAdded }}</p>
+        <div class="row">
+            <div class="pull-left"><strong>Date Posted: </strong> {{ job.dateAdded }}</div>
+            <div class="pull-right"><strong>Commission: </strong>{{ job.commission | currency}}</div>
+        </div>
+        <br/>
+
        <p>{{ job.jobDescription }}</p>
+        <img src="{{ job.imageLink }}" width="auto" class="img-responsive center">
     </div>
 
     </div>

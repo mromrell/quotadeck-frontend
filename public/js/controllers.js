@@ -234,7 +234,7 @@ angular.module('roApp.controllers', [])
                     .then(function (data) {
                         for (var i = 0; i < $scope.jobList.length; i++){
                            var num = $scope.jobList[i].company;
-                           $scope.jobList[i].company = data[num].companyName;
+                           $scope.jobList[i].company = data[num - 1].companyName;
                         }
 
                     });
