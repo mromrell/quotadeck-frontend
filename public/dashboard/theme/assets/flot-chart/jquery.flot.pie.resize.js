@@ -14,7 +14,7 @@
  2009-10-23: IE full circle fix, donut
  2009-11-11: Added basic hover from btburnett3 - does not work in IE, and center is off in Chrome and Opera
  2009-11-17: Added IE hover capability submitted by Anthony Aragues
- 2009-11-18: Added bug fix submitted by Xavi Ivars (issues with arrays when other JS libraries are included as well)
+ 2009-11-18: Added bug fix submitted by Xavi Ivars (issues with arrays when other JS libraryraries are included as well)
 
 
  Available options are:
