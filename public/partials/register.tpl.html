@@ -1,40 +1,41 @@
 
 <div class="container">
 
-    <div class="starter-template center">
+    <div class="starter-template center" >
+        <div class="text-center">
         <h1>Account registration</h1>
 
         <p class="lead">Create a free Quote Deck account</p>
-
-        <form role="form" name="newUserForm" ng-submit="adduser()" style="max-width: 450px;" ng-disabled="disabled"
+        </div>
+        <form class="form-signin" role="form" name="newUserForm" ng-submit="adduser()" style="max-width: 450px;" ng-disabled="disabled"
               class="form-register">
             <div class="form-group">
-                <h4>Username:*</h4>
+                <h4>Username:</h4>
                 <input type="text" name="username" ng-model="user.username" placeholder="Username" required="required"
                        class="form-control"/>
 
-                <h4>First Name:*</h4>
+                <h4>First Name:</h4>
                 <input type="text" name="first_name" ng-model="user.first_name" placeholder="First Name"
                        required="required" label="First Name" class="form-control"/>
 
-                <h4>Last Name:*</h4>
+                <h4>Last Name:</h4>
                 <input type="text" name="last_name" ng-model="user.last_name" placeholder="Last Name"
                        required="required" label="Last Name" class="form-control"/>
 
                 <h4>E-Mail:</h4>
-                <input type="email" name="email" ng-model="user.email" placeholder="E-Mail Address"
+                <input type="email" name="email" ng-model="user.email" placeholder="Your email"
                        class="form-control"/>
 
                 <h4>Verify E-mail:</h4>
-                <input type="email" name="email2" ng-model="user.email" placeholder="Nobody Likes Typos..."
+                <input type="email" name="email2" placeholder="Your email"
                        class="form-control" data-validation-matches-match="email"
                        data-validation-matches-message="Must match email address entered above"/>
 
-                <h4>Choose a Password:*</h4>
+                <h4>Choose a Password:</h4>
                 <input type="password" name="password" ng-model="user.password" placeholder="Password" required="required"
                        class="form-control"/>
-                <h4>Re-Type Your Password:*</h4>
-                <input type="password" name="password2" placeholder="Re-Type Your Password" required="required"
+                <h4>Re-Type Your Password:</h4>
+                <input type="password" name="password2" placeholder="Password" required="required"
                        class="form-control" data-validation-matches-match="password"
                        data-validation-matches-message="Your passwords don't match."/>
 
