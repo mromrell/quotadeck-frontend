@@ -98,7 +98,7 @@ var roApp = angular.module('roApp', [
                 title: 'salesman'
             })
             .when('/dashboard', {
-                templateUrl: 'dashboard.html',
+                templateUrl: 'partials/dashboard.html',
                 controller: 'DashboardController',
                 title: 'Dashboard'
             })

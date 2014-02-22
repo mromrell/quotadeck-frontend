@@ -1,3 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="roApp" ng-controller="BaseController">
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ascii" /><!-- /Added by HTTrack -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Develpixel">
+    <link rel="shortcut icon" href="partials/images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="partials/images/favicon/favicon.ico" type="image/x-icon">
+
+    <title>QuotaDeck - Business Template</title>
+
+        <link rel="stylesheet" href="css/app.css"/>
+
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+    <script src="lib/angularLocalStorage/src/angularLocalStorage.js"></script>
+    <script src="lib/underscore/underscore.js"></script>
+    <script src="lib/restangular/dist/restangular.min.js"></script>
+    <!-- PACE.JS -->
+    <script src="partials/js/library/pace.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="partials/css/bootstrap.min.css" rel="stylesheet">
+    <link href="partials/css/library/font-awesome.min.css" rel="stylesheet">
+    <link href="partials/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="partials/demo-asset/css/style.css">
+    <link href="partials/css/scheme/soft-green.css" rel="stylesheet" id="clscheme">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar">
+    <div id="lazyload"></div>
+    <!-- BEGIN Navbar -->
+    <nav id="navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="wrapper">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html#/home">
+                    <img src="partials/images/logo.png" class="logo" alt="logo">QuotaDeck.</a>
+            </div>
+
+            <div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                     <li class=""><a href="index.html#/findJob">Find Opportunities</a>
+                    </li>
+                     <li class=""><a href="index.html#/createJob">Create a Sales Target</a>
+                    </li>
+                     <li class=""><a href="/public/s-dashboard.html">Dashboard</a>
+                    </li>
+                    <li class=""><a href="index.html#/createJob">How it works</a>
+                    </li>
+                    <li><a class="nav-spacer">&nbsp;</a>
+                    </li>
+                    <li><a href="index.html#/login">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /wrapper -->
+    </nav>
+    <!-- END Navbar -->
+
+
+
+    <!--BEGIN PAGE BODY-->
+    <section class="pageBody container">
 <div class="container">
 
 <!--Core CSS -->
@@ -54,31 +135,38 @@ border-right: 0px solid #D6D6D6;
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href=" /index.html">
+                    <a class="active" href="s-dashboard.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
-                    <a href=" /index-2.html">
+                    <a href="s-leaderboard.html">
                         <i class="fa fa-th"></i>
                         <span>Leaderboard</span>
                     </a>
                 </li>
-                                <li>
-                    <a href=" /index-2.html">
+                <li>
+                    <a href="s-salesRepDetails.tpl.html">
+                        <i class="fa fa-book"></i>
+                        <span>Rep Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="s-salesman.html">
                         <i class="fa fa-book"></i>
                         <span>Manage Team</span>
                     </a>
                 </li>
                 <li>
-                    <a href=" /index-2.html">
+                    <a href="#">
                         <i class=" fa fa-bar-chart-o"></i>
                         <span>Manage Listings</span>
                     </a>
                 </li>
             
-            </ul>            </div>
+            </ul>
+        </div>
         <!-- sidebar menu end-->
     </div>
 </aside>
@@ -432,3 +520,45 @@ border-right: 0px solid #D6D6D6;
 
 <!--script for this page-->
 </div>
+
+  </section>
+
+
+    <!-- BEGIN FOOTER -->
+    <section id="footer">
+        <div class="contact-wrapper footerMargin">
+            <div class="container">
+                <div class="credits">
+                    <div class="container">
+                        <div class="row" style="padding-top:15px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <p class="credits-title">MADE WITH LOVE AT <a class="hovercolor" href="http://www.provo.startupweekend.org">STARTUP WEEKEND</a> &copy;&nbsp;2014.</p>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <p class="credits-title-link"><a class="hovercolor" href="javascript:;">Contact</a> / <a class="hovercolor" href="javascript:;">About</a> / <a class="hovercolor" href="javascript:;">Blog</a> / <a class="hovercolor" href="javascript:;">Terms</a>
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END FOOTER -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/constants.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+
+    <script src="partials/js/library/jquery.min.js"></script>
+    <script src="partials/js/bootstrap.min.js"></script>
+    <script src="partials/js/library/smoothscroll.js"></script>
+    <script src="partials/js/main.js"></script>
+</body>
+
+</html>
