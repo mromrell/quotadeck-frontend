@@ -25,40 +25,25 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
-    .controller('RegisterController', ['$scope', '$window', 'Restangular', 'SessionService', function($scope, $window, Restangular, SessionService) {
-        $scope.user = {}
+     .controller('RegisterController', ['$scope', 'Restangular', function($scope, Restangular) {
+        $scope.user = {
+            'username': '',
+            'first_name':'',
+            'last_name':'',
+            'email':'',
+            'password':''
+        }
 
-        $scope.username = null;
-        $scope.password = null;
-        $scope.first_name = null;
-        $scope.last_name = null;
-        $scope.email = null;
 
-        $scope.doRegister = function() {
-            $scope.user = {
-                'email': $scope.email,
-                'password': $scope.password,
-                'username': $scope.username,
-                'date_joined': new Date(),
-                'first_name': $scope.first_name,
-                'last_name': $scope.last_name
-            };
-            Restangular.all('users').customPOST($scope.user)
-                .then(function(data) {
-                    $window.location = 'index.html#/accountProfile';
-                    console.log('Register Success: ' + response);
-                }), function(response) {
-                    console.log('Register error: ' + response);
-                    $scope.errorMessage = response;
-                };
-        };
+        $scope.adduser = function() {
+           Restangular.one('users').customPOST($scope.user).then(function (data) {
+//                $scope.user_goals = data;
+                console.log(data);
+            })
+           $window.location = 'partials/home.html';
+        }
 
-        $scope.hasError = function (field, validation) {
-            if (validation) {
-                return $scope.registerForm[field].$dirty && $scope.registerForm[field].$error[validation];
-            }
-            return $scope.registerForm[field].$dirty && $scope.registerForm[field].$invalid;
-        };
+        //console.log('In Register controller');
     }])
 
     // ---------------------------------------------------------------
