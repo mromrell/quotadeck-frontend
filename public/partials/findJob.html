@@ -26,10 +26,10 @@
             <thead>
             <tr>
                 <th></th>
-                <th>The Op:  <a href="" ng-click="predicate = 'jobTitle'; reverse=!reverse"><i class="glyphicon glyphicon-sort"></i></a></th>
-                <th>Company: <a href="" ng-click="predicate = 'company'; reverse=!reverse"><i class="glyphicon glyphicon-sort"></i></a></th>
+                <th><a href="" ng-click="predicate = 'jobTitle'; reverse=!reverse">The Op</a></th>
+                <th><a href="" ng-click="predicate = 'company'; reverse=!reverse">Company</a></th>
                 <th>Description</th>
-                <th>Avg. Commission: <a href="" ng-click="predicate = 'commission'; reverse=!reverse"><i class="glyphicon glyphicon-sort"></i></a></th>
+                <th><a href="" ng-click="predicate = 'commission'; reverse=!reverse">Commission</a></th>
             </tr>
             </thead>
             <tbody ng-repeat="job in jobList | filter:searchText | orderBy:predicate:reverse">
