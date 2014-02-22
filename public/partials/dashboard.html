@@ -1,63 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="ThemeBucket">
-    <link rel="shortcut icon" href="images/favicon.html">
-    <title>QuotaDeck</title>
-    <!--Core CSS -->
-    <link href="theme/bs3/css/bootstrap.min.css" rel="stylesheet">
-    <link href="theme/assets/jquery-ui/jquery-ui-1.10.1.custom.min.css" rel="stylesheet">
-    <link href="theme/css/bootstrap-reset.css" rel="stylesheet">
-    <link href="theme/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="theme/assets/jvector-map/jquery-jvectormap-1.2.2.css" rel="stylesheet">
-    <link href="theme/css/clndr.css" rel="stylesheet">
-    <!--clock css-->
-    <link href="theme/assets/css3clock/css/style.css" rel="stylesheet">
-    <!--Morris Chart CSS -->
-    <link rel="stylesheet" href="theme/assets/morris-chart/morris.css">
-    <!-- Custom styles for this template -->
-    <link href="theme/css/style.css" rel="stylesheet">
-    <link href="theme/css/style-responsive.css" rel="stylesheet"/>
-</head>
-<body>
-<section id="container">
-<nav id="navbars" class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="wrapper">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html#/home">
-                    <img src="partials/images/logo.png" class="logo" alt="logo">QuotaDeck.</a>
-            </div>
+<div class="container">
 
-            <div id="navbar" class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                     <li class=""><a href="index.html#/findJob">Find Opportunities</a>
-                    </li>
-                     <li class=""><a href="index.html#/createJob">Create an Sales Target</a>
-                    </li>
-                     <li class=""><a href="dashboard/index.html">Dashboard</a>
-                    </li>
-                    <li class=""><a href="index.html#/createJob">How it works</a>
-                    </li>
-                    <li><a class="nav-spacer">&nbsp;</a>
-                    </li>
-                    <li><a href="index.html#/login">Login</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /wrapper -->
-    </nav>
+<!--Core CSS -->
+    <link href="partials/theme/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link href="partials/theme/css/clndr.css" rel="stylesheet">
+    <!--clock css-->
+    <link href="partials/theme/assets/css3clock/css/style.css" rel="stylesheet">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="partials/theme/assets/morris-chart/morris.css">
+    <!-- Custom styles for this template -->
+    <link href="partials/theme/css/style.css" rel="stylesheet">
+    <link href="partials/theme/css/style-responsive.css" rel="stylesheet"/>
+
+<style type="text/css">
+.wrapper{
+    margin-top: 0px;
+    padding: 6px;
+}
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.wrapper>.row{
+    width: 118%;
+}
+ul.sidebar-menu {
+padding-top: 35px;
+}
+.wrapper {
+border-left: 0px solid #D6D6D6;
+border-right: 0px solid #D6D6D6;
+}
+.wrapper>.row:first-of-type{
+    margin-top: 20px
+}
+</style>
+
+
+
+
 <!--sidebar start-->
 <aside>
     <div id="sidebar" class="nav-collapse">
@@ -65,130 +48,30 @@
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="theme/index-2.html">
+                    <a class="active" href="partials/theme/index.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-laptop"></i>
-                        <span>Layouts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/boxed_page.html">Boxed Page</a></li>
-                        <li><a href="theme/horizontal_menu.html">Horizontal Menu</a></li>
-                        <li><a href="theme/language_switch.html">Language Switch Bar</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-book"></i>
-                        <span>UI Elements</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/general.html">General</a></li>
-                        <li><a href="theme/buttons.html">Buttons</a></li>
-                        <li><a href="theme/widget.html">Widget</a></li>
-                        <li><a href="theme/slider.html">Slider</a></li>
-                        <li><a href="theme/tree_view.html">Tree View</a></li>
-                        <li><a href="theme/nestable.html">Nestable</a></li>
-                        <li><a href="theme/grids.html">Grids</a></li>
-                        <li><a href="theme/calendar.html">Calender</a></li>
-                        <li><a href="theme/draggable_portlet.html">Draggable Portlet</a></li>
-                    </ul>
-                </li>
                 <li>
-                    <a href="fontawesome.html">
-                        <i class="fa fa-bullhorn"></i>
-                        <span>Fontawesome</span>
-                    </a>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
+                    <a href="partials/theme/index-2.html">
                         <i class="fa fa-th"></i>
-                        <span>Data Tables</span>
+                        <span>Leaderboard</span>
                     </a>
-                    <ul class="sub">
-                        <li><a href="theme/basic_table.html">Basic Table</a></li>
-                        <li><a href="theme/responsive_table.html">Responsive Table</a></li>
-                        <li><a href="theme/dynamic_table.html">Dynamic Table</a></li>
-                        <li><a href="theme/editable_table.html">Editable Table</a></li>
-                    </ul>
                 </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-tasks"></i>
-                        <span>Form Components</span>
+                                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class="fa fa-book"></i>
+                        <span>Manage Team</span>
                     </a>
-                    <ul class="sub">
-                        <li><a href="theme/form_component.html">Form Elements</a></li>
-                        <li><a href="theme/advanced_form.html">Advanced Components</a></li>
-                        <li><a href="theme/form_wizard.html">Form Wizard</a></li>
-                        <li><a href="theme/form_validation.html">Form Validation</a></li>
-                        <li><a href="theme/file_upload.html">Muliple File Upload</a></li>
-
-                        <li><a href="theme/dropzone.html">Dropzone</a></li>
-                        <li><a href="theme/inline_editor.html">Inline Editor</a></li>
-
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-envelope"></i>
-                        <span>Mail </span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/mail.html">Inbox</a></li>
-                        <li><a href="theme/mail_compose.html">Compose Mail</a></li>
-                        <li><a href="theme/mail_view.html">View Mail</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Charts</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/morris.html">Morris</a></li>
-                        <li><a href="theme/chartjs.html">Chartjs</a></li>
-                        <li><a href="theme/flot_chart.html">Flot Charts</a></li>
-                        <li><a href="theme/c3_chart.html">C3 Chart</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Maps</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/google_map.html">Google Map</a></li>
-                        <li><a href="theme/vector_map.html">Vector Map</a></li>
-                    </ul>
-                </li>
-                <li class="sub-menu">
-                    <a href="javascript:;">
-                        <i class="fa fa-glass"></i>
-                        <span>Extra</span>
-                    </a>
-                    <ul class="sub">
-                        <li><a href="theme/blank.html">Blank Page</a></li>
-                        <li><a href="theme/lock_screen.html">Lock Screen</a></li>
-                        <li><a href="theme/profile.html">Profile</a></li>
-                        <li><a href="theme/invoice.html">Invoice</a></li>
-                        <li><a href="theme/pricing_table.html">Pricing Table</a></li>
-                        <li><a href="theme/timeline.html">Timeline</a></li>                    
-<li><a href="gallery.html">Media Gallery</a></li><li><a href="404.html">404 Error</a></li>
-                        <li><a href="theme/500.html">500 Error</a></li>
-                        <li><a href="theme/registration.html">Registration</a></li>
-                    </ul>
                 </li>
                 <li>
-                    <a href="theme/login.html">
-                        <i class="fa fa-user"></i>
-                        <span>Login Page</span>
+                    <a href="partials/theme/index-2.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Manage Listings</span>
                     </a>
                 </li>
+            
             </ul>            </div>
         <!-- sidebar menu end-->
     </div>
@@ -417,7 +300,7 @@
             <div class=" wk-progress tm-membr">
                 <div class="col-md-2 col-xs-2">
                     <div class="tm-avatar">
-                        <img src="theme/images/lock_thumb.jpg" alt="">
+                        <img src="partials/theme/images/lock_thumb.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-7 col-xs-7">
@@ -430,7 +313,7 @@
             <div class=" wk-progress tm-membr">
                 <div class="col-md-2 col-xs-2">
                     <div class="tm-avatar">
-                        <img src="theme/images/avatar-mini-2.jpg" alt="">
+                        <img src="partials/theme/images/avatar-mini-2.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-7 col-xs-7">
@@ -443,7 +326,7 @@
             <div class=" wk-progress tm-membr">
                 <div class="col-md-2 col-xs-2">
                     <div class="tm-avatar">
-                        <img src="theme/images/avatar-mini-3.jpg" alt="">
+                        <img src="partials/theme/images/avatar-mini-3.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-7 col-xs-7">
@@ -456,7 +339,7 @@
             <div class=" wk-progress tm-membr">
                 <div class="col-md-2 col-xs-2">
                     <div class="tm-avatar">
-                         <img src="theme/images/lock_thumb.jpg" alt="">
+                         <img src="partials/theme/images/lock_thumb.jpg" alt="">
                     </div>
                 </div>
                 <div class="col-md-7 col-xs-7">
@@ -496,302 +379,50 @@
 </section>
 </section>
 <!--main content end-->
-<!--right sidebar start-->
-<div class="right-sidebar">
-<div class="search-row">
-    <input type="text" placeholder="Search" class="form-control">
-</div>
-<div class="right-stat-bar">
-<ul class="right-side-accordion">
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head red-bg active clearfix">
-        <span class="pull-left">work progress (5)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row side-mini-stat clearfix">
-                <div class="side-graph-info">
-                    <h4>Target sell</h4>
-                    <p>
-                        25%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="target-sell">
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info">
-                    <h4>product delivery</h4>
-                    <p>
-                        55%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="p-delivery">
-                        <div class="sparkline" data-type="bar" data-resize="true" data-height="30" data-width="90%" data-bar-color="#39b7ab" data-bar-width="5" data-data="[200,135,667,333,526,996,564,123,890,564,455]">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info payment-info">
-                    <h4>payment collection</h4>
-                    <p>
-                        25%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="p-collection">
-						<span class="pc-epie-chart" data-percent="45">
-						<span class="percent"></span>
-						</span>
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="side-graph-info">
-                    <h4>delivery pending</h4>
-                    <p>
-                        44%, Deadline 12 june 13
-                    </p>
-                </div>
-                <div class="side-mini-graph">
-                    <div class="d-pending">
-                    </div>
-                </div>
-            </div>
-            <div class="prog-row side-mini-stat">
-                <div class="col-md-12">
-                    <h4>total progress</h4>
-                    <p>
-                        50%, Deadline 12 june 13
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div style="width: 50%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="20" role="progressbar" class="progress-bar progress-bar-info">
-                            <span class="sr-only">50% Complete</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head terques-bg active clearfix">
-        <span class="pull-left">contact online (5)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="theme/images/avatar1_small.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Jonathan Smith</a></h4>
-                    <p>
-                        Work for fun
-                    </p>
-                </div>
-                <div class="user-status text-danger">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="theme/images/avatar1.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Anjelina Joe</a></h4>
-                    <p>
-                        Available
-                    </p>
-                </div>
-                <div class="user-status text-success">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="theme/images/chat-avatar2.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">John Doe</a></h4>
-                    <p>
-                        Away from Desk
-                    </p>
-                </div>
-                <div class="user-status text-warning">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="theme/images/avatar1_small.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Mark Henry</a></h4>
-                    <p>
-                        working
-                    </p>
-                </div>
-                <div class="user-status text-info">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb">
-                    <a href="#"><img src="theme/images/avatar1.jpg" alt=""></a>
-                </div>
-                <div class="user-details">
-                    <h4><a href="#">Shila Jones</a></h4>
-                    <p>
-                        Work for fun
-                    </p>
-                </div>
-                <div class="user-status text-danger">
-                    <i class="fa fa-comments-o"></i>
-                </div>
-            </div>
-            <p class="text-center">
-                <a href="#" class="view-btn">View all Contacts</a>
-            </p>
-        </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head purple-bg active">
-        <span class="pull-left"> recent activity (3)</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        just now
-                    </p>
-                    <p>
-                        <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        2 min ago
-                    </p>
-                    <p>
-                        <a href="#">Jane Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-            <div class="prog-row">
-                <div class="user-thumb rsn-activity">
-                    <i class="fa fa-clock-o"></i>
-                </div>
-                <div class="rsn-details ">
-                    <p class="text-muted">
-                        1 day ago
-                    </p>
-                    <p>
-                        <a href="#">Jim Doe </a>Purchased new equipments for zonal office setup
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-</li>
-<li class="widget-collapsible">
-    <a href="#" class="head widget-head yellow-bg active">
-        <span class="pull-left"> shipment status</span>
-        <span class="pull-right widget-collapse"><i class="ico-minus"></i></span>
-    </a>
-    <ul class="widget-container">
-        <li>
-            <div class="col-md-12">
-                <div class="prog-row">
-                    <p>
-                        Full sleeve baby wear (SL: 17665)
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                            <span class="sr-only">40% Complete</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="prog-row">
-                    <p>
-                        Full sleeve baby wear (SL: 17665)
-                    </p>
-                    <div class="progress progress-xs mtop10">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                            <span class="sr-only">70% Completed</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</li>
-</ul>
-
-</div>
-
-</div>
-<!--right sidebar end-->
 </section>
+
+
+
 <!-- Placed js at the end of the document so the pages load faster -->
 <!--Core js-->
-<script src="theme/js/library/jquery.js"></script>
-<script src="theme/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
-<script src="theme/bs3/js/bootstrap.min.js"></script>
-<script src="theme/js/accordion-menu/jquery.dcjqaccordion.2.7.js"></script>
-<script src="theme/js/scrollTo/jquery.scrollTo.min.js"></script>
-<script src="theme/assets/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
-<script src="theme/js/nicescroll/jquery.nicescroll.js"></script>
+<script src="partials/theme/js/library/jquery.js"></script>
+<script src="partials/theme/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="partials/theme/bs3/js/bootstrap.min.js"></script>
+<script src="partials/theme/js/accordion-menu/jquery.dcjqaccordion.2.7.js"></script>
+<script src="partials/theme/js/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="partials/theme/assets/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="partials/theme/js/nicescroll/jquery.nicescroll.js"></script>
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
-<script src="theme/assets/skycons/skycons.js"></script>
-<script src="theme/assets/jquery.scrollTo/jquery.scrollTo.js"></script>
-<script src="cdnjs.cloudflare.com/ajax/library/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="theme/assets/calendar/clndr.js"></script>
-<script src="cdnjs.cloudflare.com/ajax/library/underscore.js/1.5.2/underscore-min.js"></script>
-<script src="theme/assets/calendar/moment-2.2.1.js"></script>
-<script src="theme/js/calendar/evnt.calendar.init.js"></script>
-<script src="theme/assets/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="theme/assets/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
-<script src="theme/assets/gauge/gauge.js"></script>
+<script src="partials/theme/assets/skycons/skycons.js"></script>
+<script src="partials/theme/assets/jquery.scrollTo/jquery.scrollTo.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="partials/theme/assets/calendar/clndr.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="partials/theme/assets/calendar/moment-2.2.1.js"></script>
+<script src="partials/theme/js/calendar/evnt.calendar.init.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
+<script src="partials/theme/assets/gauge/gauge.js"></script>
 <!--clock init-->
-<script src="theme/assets/css3clock/js/script.js"></script>
+<script src="partials/theme/assets/css3clock/js/script.js"></script>
 <!--Easy Pie Chart-->
-<script src="theme/assets/easypiechart/jquery.easypiechart.js"></script>
+<script src="partials/theme/assets/easypiechart/jquery.easypiechart.js"></script>
 <!--Sparkline Chart-->
-<script src="theme/assets/sparkline/jquery.sparkline.js"></script>
+<script src="partials/theme/assets/sparkline/jquery.sparkline.js"></script>
 <!--Morris Chart-->
-<script src="theme/assets/morris-chart/morris.js"></script>
-<script src="theme/assets/morris-chart/raphael-min.js"></script>
+<script src="partials/theme/assets/morris-chart/morris.js"></script>
+<script src="partials/theme/assets/morris-chart/raphael-min.js"></script>
 <!--jQuery Flot Chart-->
-<script src="theme/assets/flot-chart/jquery.flot.js"></script>
-<script src="theme/assets/flot-chart/jquery.flot.tooltip.min.js"></script>
-<script src="theme/assets/flot-chart/jquery.flot.resize.js"></script>
-<script src="theme/assets/flot-chart/jquery.flot.pie.resize.js"></script>
-<script src="theme/assets/flot-chart/jquery.flot.animator.min.js"></script>
-<script src="theme/assets/flot-chart/jquery.flot.growraf.js"></script>
-<script src="theme/js/dashboard.js"></script>
-<script src="theme/js/custom-select/jquery.customSelect.min.js" ></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.animator.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.growraf.js"></script>
+<script src="partials/theme/js/dashboard.js"></script>
+<script src="partials/theme/js/custom-select/jquery.customSelect.min.js" ></script>
 <!--common script init for all pages-->
-<script src="theme/js/scripts.js"></script>
+<script src="partials/theme/js/scripts.js"></script>
 
 <!--script for this page-->
-</body>
-
-</html>
+</div>
