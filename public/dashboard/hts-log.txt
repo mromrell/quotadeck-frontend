@@ -32,7 +32,7 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 
 12:39:50	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css (from bucketadmin.themebucket.net/calendar.html)
 
-12:39:50	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/js/library/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
+12:39:50	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/js/libraryrary/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
 
 12:39:50	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/fullcalendar.min.js (from bucketadmin.themebucket.net/calendar.html)
 
@@ -326,7 +326,7 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 
 12:39:55	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css (from bucketadmin.themebucket.net/calendar.html)
 
-12:39:55	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/js/library/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
+12:39:55	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/js/libraryrary/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
 
 12:39:55	Warning: 	Retry after error -4 (Connect Error) at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/fullcalendar.min.js (from bucketadmin.themebucket.net/calendar.html)
 
@@ -620,7 +620,7 @@ note:	the hts-log.txt file, and hts-cache folder, may contain sensitive informat
 
 12:39:59	Error: 	"Connect Error" (-4) after 2 retries at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css (from bucketadmin.themebucket.net/calendar.html)
 
-12:39:59	Error: 	"Connect Error" (-4) after 2 retries at link bucketadmin.themebucket.net/js/library/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
+12:39:59	Error: 	"Connect Error" (-4) after 2 retries at link bucketadmin.themebucket.net/js/libraryrary/jquery-ui-1.9.2.custom.min.js (from bucketadmin.themebucket.net/calendar.html)
 
 12:39:59	Error: 	"Connect Error" (-4) after 2 retries at link bucketadmin.themebucket.net/assets/fullcalendar/fullcalendar/fullcalendar.min.js (from bucketadmin.themebucket.net/calendar.html)
 
