@@ -61,8 +61,8 @@ var roApp = angular.module('roApp', [
                 controller: 'browseApplicantsController',
                 title: 'Browse Applicants'
             })
-            .when('/JobDetails/:id', {
-                templateUrl: 'partials/JobDetails.html',
+            .when('/jobDetails/:id', {
+                templateUrl: 'partials/jobDetails.html',
                 controller: 'JobDetailsController',
                 title: 'Job Details',
                 locationspecific:'locationSpecific.html'
