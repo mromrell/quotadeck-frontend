@@ -171,14 +171,14 @@ ul {
 }
 
 .btn-success {
-    background-color: #95b75d;
-    border-color: #95b75d;
+    background-color: #2cde97;
+    border-color: #2cde97;
     color: #FFFFFF;
 }
 
 .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
-    background-color: #88a755;
-    border-color: #88a755;
+    background-color: #2cffb7;
+    border-color: #2cffb7;
     color: #FFFFFF;
 }
 
