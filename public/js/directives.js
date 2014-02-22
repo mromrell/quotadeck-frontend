@@ -21,9 +21,9 @@ angular.module('roApp.directives', [])
                     $http.post("http://localhost:8001/api-token-auth/", user_data)
                         .success(function (response) {
                             $http.defaults.headers.common['Authorization'] = 'Token ' + response.token;
-                            SessionService.saveSession(response.token);
+                            SessionService.saveSession(response.user[0]);
                             $rootScope.$broadcast('event:login-confirmed');
-                            elem.slideUp();
+//                            elem.slideUp();
                         });
 
                 });
