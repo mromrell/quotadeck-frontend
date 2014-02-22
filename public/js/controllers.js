@@ -126,23 +126,18 @@ angular.module('roApp.controllers', [])
             var newEvent = {
                 'user': 1, //$scope.session.id,
                 'eventName': $scope.newJob.eventName,
+                'listingTitle': $scope.newJob.listingTitle,
+                'industry': $scope.newJob.industry,
                 'description': $scope.newJob.description,
-                'gpsLng': $scope.newJob.gpsLng,
-                'gpsLat': $scope.newJob.gpsLat,
-                'reliableGPS': $scope.newJob.reliableGPS,
-                'street': $scope.newJob.street,
-                'city': $scope.newJob.city,
-                'state': $scope.newJob.state,
-                'country': $scope.newJob.country,
-                'comments': $scope.newJob.comments,
-                'sponsored': $scope.newJob.sponsored,
-                'forCharity': $scope.newJob.forCharity,
+                'location': $scope.newJob.location,
+                'startDate': $scope.newJob.startDate,
                 'totalCost': $scope.newJob.totalCost,
-                'participantCost': $scope.newJob.participantCost,
+                'commissionAmount': $scope.newJob.commissionAmount,
                 'linkUrl': $scope.newJob.linkUrl,
-                'eventStartDate': $scope.newJob.eventStartDate,
-                'eventEndDate': $scope.newJob.eventEndDate,
-                'photo': $scope.newJob.photos
+
+
+
+                'photo': $scope.newJob.photos,
             };
 
             // Grabs the GPS coordinates if it's not already there --------------------------------------------------------------------------------->
