@@ -196,6 +196,18 @@ angular.module('roApp.controllers', [])
                         console.log($scope.company);
                     });
             });
+        var apply = false;
+        $scope.applySwitch = function (){
+            if (apply==false){
+                apply=true;
+                console.log("true");
+                return
+            }
+            if (apply==true){
+                apply=false;
+                console.log("false");
+            }
+        }
     }])
     .controller('FindJobController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
          Restangular.all('job').getList()
@@ -255,4 +267,16 @@ angular.module('roApp.controllers', [])
             .then(function (data) {
                 $scope.company = data;
             });
+    }])
+    .controller('LeaderboardController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('SalesmanController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('ProfileDashController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
+    }])
+    .controller('DashboardController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
+
     }]);
