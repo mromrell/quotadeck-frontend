@@ -82,6 +82,26 @@ var roApp = angular.module('roApp', [
                 controller: 'HomeController',
                 title: 'Home Page'
             })
+            .when('/leaderboard', {
+                templateUrl: 'leaderboard.html',
+                controller: 'LeaderboardController',
+                title: 'leaderboard'
+            })
+            .when('/salesman', {
+                templateUrl: 'salesman.html',
+                controller: 'SalesmanController',
+                title: 'salesman'
+            })
+            .when('/profileDash', {
+                templateUrl: 'profileDash.html',
+                controller: 'ProfileDashController',
+                title: 'salesman'
+            })
+            .when('/dashboard', {
+                templateUrl: 'dashboard.html',
+                controller: 'DashboardController',
+                title: 'Dashboard'
+            })
             .when('/landing', {
                 templateUrl: 'landing-page.html',
                 controller: 'HomeController',
