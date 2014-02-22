@@ -196,18 +196,35 @@ angular.module('roApp.controllers', [])
                         console.log($scope.company);
                     });
             });
-        var apply = false;
+        $scope.apply = false;
         $scope.applySwitch = function (){
-            if (apply==false){
-                apply=true;
+            if ($scope.apply==false){
+                $scope.apply=true;
                 console.log("true");
                 return
             }
-            if (apply==true){
-                apply=false;
+            if ($scope.apply==true){
+                $scope.apply=false;
                 console.log("false");
             }
         }
+        $scope.application = {
+            'user': 1,
+            'job': 1,
+            'dateApplied': '2014-02-22',
+            'appTitle':'',
+            'appDescription':$scope.description,
+            'appCost':$scope.cost
+        }
+
+
+        $scope.submitApplication = function() {
+           Restangular.one('application').customPOST($scope.application)
+               .then(function (data) {
+            });
+           $window.location = 'index.html#/home';
+        }
+
     }])
     .controller('FindJobController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
          Restangular.all('job').getList()
