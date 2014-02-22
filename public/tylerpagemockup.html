@@ -71,42 +71,431 @@
 
 
 
+<!--Core CSS -->
+    <link href="partials/theme/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link href="partials/theme/css/clndr.css" rel="stylesheet">
+    <!--clock css-->
+    <link href="partials/theme/assets/css3clock/css/style.css" rel="stylesheet">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="partials/theme/assets/morris-chart/morris.css">
+    <!-- Custom styles for this template -->
+    <link href="partials/theme/css/style.css" rel="stylesheet">
+    <link href="partials/theme/css/style-responsive.css" rel="stylesheet"/>
+
+<style type="text/css">
+.wrapper{
+    margin-top: 0px;
+    padding: 6px;
+}
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.wrapper>.row{
+    width: 118%;
+}
+ul.sidebar-menu {
+padding-top: 35px;
+}
+.wrapper {
+border-left: 0px solid #D6D6D6;
+border-right: 0px solid #D6D6D6;
+}
+.wrapper>.row:first-of-type{
+    margin-top: 20px
+}
+</style>
 
 
 
 
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a class="active" href="partials/theme/index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class="fa fa-th"></i>
+                        <span>Leaderboard</span>
+                    </a>
+                </li>
+                                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class="fa fa-book"></i>
+                        <span>Manage Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Manage Listings</span>
+                    </a>
+                </li>
+            
+            </ul>            </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+<section class="wrapper">
+
+<!--mini statistics start-->
+<div class="row">
+    <div class="col-md-3">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="top-stats-panel">
+                    <div class="gauge-canvas">
+                        <h4 class="widget-h">Monthly Sales Goal</h4>
+                        <canvas width=160 height=100 id="gauge"></canvas>
+                    </div>
+                    <ul class="gauge-meta clearfix">
+                        <li id="gauge-textfield" class="pull-left gauge-value"></li>
+                        <li class="pull-right gauge-title">Reached</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-3">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="top-stats-panel">
+                    <div class="daily-visit">
+                        <h4 class="widget-h">Daily Interests</h4>
+                        <div id="daily-visit-chart" style="width:100%; height: 100px; display: block">
+
+                        </div>
+                        <ul class="chart-meta clearfix">
+                            <li class="pull-left visit-chart-value">3233</li>
+                            <li class="pull-right visit-chart-title"><i class="fa fa-arrow-up"></i> 15%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-3">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="top-stats-panel">
+                    <h4 class="widget-h">Top Markets</h4>
+                    <div class="sm-pie">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="col-md-3">
+        <section class="panel">
+            <div class="panel-body">
+                <div class="top-stats-panel">
+                    <h4 class="widget-h">Daily Sales</h4>
+                    <div class="bar-stats">
+                        <ul class="progress-stat-bar clearfix">
+                            <li data-percent="50%"><span class="progress-stat-percent pink"></span></li>
+                            <li data-percent="90%"><span class="progress-stat-percent"></span></li>
+                            <li data-percent="70%"><span class="progress-stat-percent yellow-b"></span></li>
+                        </ul>
+                        <ul class="bar-legend">
+                            <li><span class="bar-legend-pointer pink"></span> Draper</li>
+                            <li><span class="bar-legend-pointer green"></span> Salt Lake</li>
+                            <li><span class="bar-legend-pointer yellow-b"></span> Provo</li>
+                        </ul>
+                        <div class="daily-sales-info">
+                            <span class="sales-count">571 </span> <span class="sales-label">Sales Made</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!--mini statistics end-->
+<div class="row">
+    <div class="col-md-8">
+        <!--earning graph start-->
+        <section class="panel">
+            <header class="panel-heading">
+                Earning Graph <span class="tools pull-right">
+            <a href="javascript:;" class="fa fa-chevron-down"></a>
+            <a href="javascript:;" class="fa fa-cog"></a>
+            <a href="javascript:;" class="fa fa-times"></a>
+            </span>
+            </header>
+            <div class="panel-body">
+
+                <div id="graph-area" class="main-chart">
+                </div>
+                <div class="region-stats">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="region-earning-stats">
+                                This year total earning <span>$387,844</span>
+                            </div>
+                            <ul class="clearfix location-earning-stats">
+                                <li class="stat-divider">
+                                    <span class="first-city">$193,922</span>
+                                    Provo, UT </li>
+                                <li class="stat-divider">
+                                    <span class="second-city">$124,660</span>
+                                    Salt Lake City, UT </li>
+                                <li>
+                                    <span class="third-city">$69,262</span>
+                                    Baltimore, MD </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-5">
+                            <div id="world-map" class="vector-stat">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--earning graph end-->
+    </div>
+    <div class="col-md-4">
+        <!--widget graph start-->
+        <section class="panel">
+            <div class="panel-body">
+                <div class="monthly-stats pink">
+                    <div class="clearfix">
+                        <h4 class="pull-left"> February 2014</h4>
+                        <!-- Nav tabs -->
+                        <div class="btn-group pull-right stat-tab">
+                            <a href="#line-chart" class="btn stat-btn active" data-toggle="tab"><i class="ico-stats"></i></a>
+                            <a href="#bar-chart" class="btn stat-btn" data-toggle="tab"><i class="ico-bars"></i></a>
+                        </div>
+                    </div>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="line-chart">
+                            <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-min-spot-color="false" data-max-spot-color="false" data-line-color="#ffffff" data-spot-color="#ffffff" data-fill-color="" data-highlight-line-color="#ffffff" data-highlight-spot-color="#e1b8ff" data-spot-radius="3" data-data="[100,200,459,234,600,800,345,987,675,457,765]">
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="bar-chart">
+                            <div class="sparkline" data-type="bar" data-resize="true" data-height="75" data-width="90%" data-bar-color="#d4a7f5" data-bar-width="10" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle-sat">
+                    <ul>
+                        <li class="left-stat-label"><span class="sell-percent">60%</span><span>Direct Sell</span></li>
+                        <li><span class="epie-chart" data-percent="45">
+                        <span class="percent"></span>
+                        </span></li>
+                        <li class="right-stat-label"><span class="sell-percent">40%</span><span>Channel Sell</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--widget graph end-->
+        <!--widget graph start-->
+        <section class="panel">
+            <div class="panel-body">
+                <ul class="clearfix prospective-spark-bar">
+                    <li class="pull-left spark-bar-label">
+                        <span class="bar-label-value"> $18,887</span>
+                        <span>Projected Sales</span>
+                    </li>
+                    <li class="pull-right">
+                        <div class="sparkline" data-type="bar" data-resize="true" data-height="40" data-width="90%" data-bar-color="#f6b0ae" data-bar-width="5" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!--widget graph end-->
+
+    </div>
+</div>
+<!--mini statistics start-->
+<div class="row">
+    <div class="col-md-3">
+        <div class="mini-stat clearfix">
+            <span class="mini-stat-icon orange"><i class="fa fa-gavel"></i></span>
+            <div class="mini-stat-info">
+                <span>320</span>
+                New Order Received
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mini-stat clearfix">
+            <span class="mini-stat-icon tar"><i class="fa fa-tag"></i></span>
+            <div class="mini-stat-info">
+                <span>22,450</span>
+                Copy Sold Today
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mini-stat clearfix">
+            <span class="mini-stat-icon pink"><i class="fa fa-money"></i></span>
+            <div class="mini-stat-info">
+                <span>34,320</span>
+                Dollar Profit Today
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="mini-stat clearfix">
+            <span class="mini-stat-icon green"><i class="fa fa-eye"></i></span>
+            <div class="mini-stat-info">
+                <span>32720</span>
+                Unique Visitors
+            </div>
+        </div>
+    </div>
+</div>
+<!--mini statistics end-->
+
+
+<div class="row">
+     <div class="col-md-4">
+        <div class="prf-box">
+            <h3 class="prf-border-head">Top Sales People</h3>
+            <div class=" wk-progress tm-membr">
+                <div class="col-md-2 col-xs-2">
+                    <div class="tm-avatar">
+                        <img src="partials/theme/images/lock_thumb.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-7">
+                    <span class="tm">John Boltana - $27,180</span>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a href="#" class="btn btn-white">Reward</a>
+                </div>
+            </div>
+            <div class=" wk-progress tm-membr">
+                <div class="col-md-2 col-xs-2">
+                    <div class="tm-avatar">
+                        <img src="partials/theme/images/avatar-mini-2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-7">
+                    <span class="tm">Bryn Willis - $20,085</span>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a href="#" class="btn btn-white">Reward</a>
+                </div>
+            </div>
+            <div class=" wk-progress tm-membr">
+                <div class="col-md-2 col-xs-2">
+                    <div class="tm-avatar">
+                        <img src="partials/theme/images/avatar-mini-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-7">
+                    <span class="tm">Eric Schmidt - $15,035</span>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a href="#" class="btn btn-white">Reward</a>
+                </div>
+            </div>
+            <div class=" wk-progress tm-membr">
+                <div class="col-md-2 col-xs-2">
+                    <div class="tm-avatar">
+                         <img src="partials/theme/images/lock_thumb.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-xs-7">
+                    <span class="tm">Amy Stamos - $14,300</span>
+                </div>
+                <div class="col-md-3 col-xs-3">
+                    <a href="#" class="btn btn-white">Reward</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8">
+        <div class="event-calendar clearfix">
+            <div class="col-lg-7 calendar-block">
+                <div class="cal1 ">
+                </div>
+            </div>
+            <div class="col-lg-5 event-list-block">
+                <div class="cal-day">
+                    <span>Today</span>
+                    Friday
+                </div>
+                <ul class="event-list">
+                    <li>Lunch with John @ 3:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
+                    <li>Coffee meeting with Lisa @ 4:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
+                    <li>Skype conference with patrick @ 5:45 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
+                    <li>Introduction @ 7:00 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
+                    <li>Sales pitch with daniel @ 9:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
+
+                </ul>
+                <input type="text" class="form-control evnt-input" placeholder="NOTES">
+            </div>
+        </div>
+    </div>
+</div>
+
+</section>
+</section>
+<!--main content end-->
+</section>
 
 
 
+<!-- Placed js at the end of the document so the pages load faster -->
+<!--Core js-->
+<script src="partials/theme/js/library/jquery.js"></script>
+<script src="partials/theme/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="partials/theme/bs3/js/bootstrap.min.js"></script>
+<script src="partials/theme/js/accordion-menu/jquery.dcjqaccordion.2.7.js"></script>
+<script src="partials/theme/js/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="partials/theme/assets/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="partials/theme/js/nicescroll/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="partials/theme/assets/skycons/skycons.js"></script>
+<script src="partials/theme/assets/jquery.scrollTo/jquery.scrollTo.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="partials/theme/assets/calendar/clndr.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="partials/theme/assets/calendar/moment-2.2.1.js"></script>
+<script src="partials/theme/js/calendar/evnt.calendar.init.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
+<script src="partials/theme/assets/gauge/gauge.js"></script>
+<!--clock init-->
+<script src="partials/theme/assets/css3clock/js/script.js"></script>
+<!--Easy Pie Chart-->
+<script src="partials/theme/assets/easypiechart/jquery.easypiechart.js"></script>
+<!--Sparkline Chart-->
+<script src="partials/theme/assets/sparkline/jquery.sparkline.js"></script>
+<!--Morris Chart-->
+<script src="partials/theme/assets/morris-chart/morris.js"></script>
+<script src="partials/theme/assets/morris-chart/raphael-min.js"></script>
+<!--jQuery Flot Chart-->
+<script src="partials/theme/assets/flot-chart/jquery.flot.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.animator.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.growraf.js"></script>
+<script src="partials/theme/js/dashboard.js"></script>
+<script src="partials/theme/js/custom-select/jquery.customSelect.min.js" ></script>
+<!--common script init for all pages-->
+<script src="partials/theme/js/scripts.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!--script for this page-->
 
 
 
