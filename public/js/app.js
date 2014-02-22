@@ -98,7 +98,7 @@ var roApp = angular.module('roApp', [
                 title: 'salesman'
             })
             .when('/dashboard', {
-                templateUrl: 'dashboard.html',
+                templateUrl: 'partials/dashboard.html',
                 controller: 'DashboardController',
                 title: 'Dashboard'
             })
@@ -111,8 +111,8 @@ var roApp = angular.module('roApp', [
                 redirectTo: '/home'
             });
 
-//           RestangularProvider.setBaseUrl('http://quotadeck-backend.herokuapp.com');
-            RestangularProvider.setBaseUrl('http://localhost:8001');
+           RestangularProvider.setBaseUrl('http://quotadeck-backend.herokuapp.com');
+//            RestangularProvider.setBaseUrl('http://localhost:8001');
     }])
     .run(['$location', '$rootScope', 'baseTitle', '$http', 'Restangular', 'SessionService', function ($location, $rootScope, baseTitle, $http, Restangular, SessionService) {
         $rootScope.$on('$routeChangeSuccess', function (event, current) {

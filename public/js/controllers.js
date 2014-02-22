@@ -230,7 +230,14 @@ angular.module('roApp.controllers', [])
          Restangular.all('job').getList()
             .then(function (data) {
                 $scope.jobList = data;
-                console.log($scope.jobList);
+                  Restangular.all('companies').getList()
+                    .then(function (data) {
+                        for (var i = 0; i < $scope.jobList.length; i++){
+                           var num = $scope.jobList[i].company;
+                           $scope.jobList[i].company = data[num].companyName;
+                        }
+
+                    });
             });
     }])
     .controller('browseApplicantsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
