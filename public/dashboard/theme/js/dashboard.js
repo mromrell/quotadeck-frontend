@@ -176,9 +176,9 @@ $(function() {
 $(function() {
 
     var dataPie = [
-        { label: "Samsung",  data: 50},
-        { label: "Nokia",  data: 50},
-        { label: "Syphony",  data: 100}
+        { label: "Manufacturing",  data: 50},
+        { label: "Construction",  data: 50},
+        { label: "Retail",  data: 100}
     ];
 // DONUT
     $.plot($(".sm-pie"), dataPie,
