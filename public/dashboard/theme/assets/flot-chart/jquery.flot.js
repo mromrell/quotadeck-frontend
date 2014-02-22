@@ -1,4 +1,4 @@
-/* Javascript plotting libraryraryrary for jQuery, version 0.8.1.
+/* Javascript plotting libraryrary for jQuery, version 0.8.1.
 
 Copyright (c) 2007-2013 IOLA and Ole Laursen.
 Licensed under the MIT license.
