@@ -1874,7 +1874,7 @@ div.hexapic:hover {
     position: relative;
 }
 .action:before {
-    top: 100%;
+   /* top: 100%; */
     left: 50%;
     border: solid transparent;
     content:" ";
@@ -1899,6 +1899,10 @@ div.hexapic:hover {
     background: #111;
     padding-top: 60px;
     padding-bottom: 120px;
+}
+ .testimoni2 {
+    background: #c0c0c0;
+    padding-top: 10px;
 }
 #quote-slider .servicesLink {
     zoom: 1;
@@ -2698,7 +2702,7 @@ article.post .post_excerpt a.readmore:hover {
 
 
 .button-white-side{
-    width: 300px;
+    width: auto;
     font-size: 17px;
 }
 .bigHeader>p{
