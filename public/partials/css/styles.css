@@ -803,11 +803,10 @@
 .button-white-side {
     border: 2px solid #FFF;
     color: #FFF;
-    background-color: rgb(63, 160, 133);
+    background-color: #2cde97;
 }
 .button-white-side:hover {
     color: #FFF;
-    background-color: rgb(63, 160, 133);
     -moz-box-shadow: inset 1px 1px 19px 15px rgba(255, 255, 255, 0.3);
     -webkit-box-shadow: inset 1px 1px 19px 15px rgba(255, 255, 255, 0.3);
     box-shadow: inset 1px 1px 19px 15px rgba(255, 255, 255, 0.3);
