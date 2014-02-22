@@ -25,7 +25,7 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     // This was copied from another project and needs to be reworked
     // ---------------------------------------------------------------
-     .controller('RegisterController', ['$scope', 'Restangular', function($scope, Restangular) {
+     .controller('RegisterController', ['$scope', 'Restangular', '$window', function($scope, Restangular, $window) {
         $scope.user = {
             'username': '',
             'first_name':'',
@@ -40,7 +40,7 @@ angular.module('roApp.controllers', [])
 //                $scope.user_goals = data;
                 console.log(data);
             })
-           $window.location = 'partials/home.html';
+           $window.location = 'index.html#/home';
         }
 
         //console.log('In Register controller');
