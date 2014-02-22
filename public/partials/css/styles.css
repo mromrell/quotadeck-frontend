@@ -2705,6 +2705,16 @@ article.post .post_excerpt a.readmore:hover {
     width: auto;
     font-size: 17px;
 }
+.button-white-side-hire{
+    width: 50%;
+    font-size: 17px;
+    background-color: #2cde97;
+}
+ .button-white-side-sell{
+    width: 50%;
+    font-size: 17px;
+     background-color: #97C8F3;
+}
 .bigHeader>p{
     font-size: 19px;
 }

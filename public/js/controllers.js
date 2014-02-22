@@ -182,141 +182,19 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     .controller('JobDetailsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
         $scope.session = SessionService.getSession();
-        //to display images from Home page
-        $scope.paymentForm = 'partials/paymentForm.html';
 
-        Restangular.one('uploadedimages', $routeParams.id).customGET()
-            .then(function (photo_url) {
-                $scope.photo_url = photo_url[0];
-        });
-
-        Restangular.one('location-detail', $routeParams.id).customGET()
-        .then(function (location) {
-            $scope.location = location;
-
-            // this Shows the Edit Event button if you are a logged in as a super user or you are the user that created the event
-            /*if ($scope.session.is_superuser == true || $scope.location.user == $scope.session.id){
-                $scope.showEdit = "Approved";
-                }
-                else{
-                $scope.showEdit = null;
-                }*/
-            // This Shows a warning if the GPS coordinantes were not manually entered at the time of the event creation
-            if ($scope.location.reliableGPS == false){
-                $scope.gpsStatus = "These coordinates have been approximated to the city center";
-                }
-                else{
-                    $scope.gpsStatus = "These coordinates have been manually entered and should be exact";
-                }
-
-            // Maps the Location --------------------------------------------------------------------------------->
-            var myLatlng = new google.maps.LatLng($scope.location.gpsLat, $scope.location.gpsLng);
-            var mapOptions = {
-                zoom: 6,
-                center: myLatlng
-            };
-            var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: $scope.location.eventName
-            });
-            // Ends Maps the Location --------------------------------------------------------------------------------->
-
-            eventPopulator();
-
-        });
-
-        $scope.uiConfig = {
-          calendar:{
-            height: 250,
-            editable: true,
-            header:{
-              left: false,
-              center: false, //'title',
-              right: false
-            },
-            dayClick: $scope.alertEventOnClick,
-            eventDrop: $scope.alertOnDrop,
-            eventResize: $scope.alertOnResize
-          }
-        };
-
-        $scope.eventSources = [];
-
-        function eventPopulator(){
-            var date = new Date();
-            var d = date.getDate();
-            var m = date.getMonth();
-            var y = date.getFullYear();
-
-            $scope.events = [
-              {title: $scope.location.eventName, start: $scope.location.eventStartDate, end: $scope.location.eventEndDate}
-            ];
-            $scope.eventSources.push($scope.events);
-        }
-
-        console.log($scope.eventSources);
-
-        $scope.commentText = null;
-        $scope.submitted = false;
-
-        $scope.save = function () {
-            if ($scope.submitted == false) {
-
-                var fd = {};
-                fd["locationPostID"] = $routeParams.id;
-                fd["commentText"] = $scope.commentText;
-                fd["user"] = $scope.session.id;
-
-                $http({
-                    method: 'POST',
-                    url: 'http://localhost:8001/comment',
-//                    url: 'http://vast-journey-8108.herokuapp.com/comment',
-                    data: fd
-                }).success(function (response) {
-                        $scope.commentList[$scope.commentList.length] = response;
-                        $scope.submitted = true;
-                    }).error(function (response) {
-                        console.log("there was an Error! Run!!" + response);
-                    });
-            }
-        };
-        //to save upvotes and downvotes to server
-
-        $scope.countChoculaUp = function(location){
-            if (location.voted==null){
-                location.voteCount += 1;
-                location.voted = true;
-                delete location.photos;
-                Restangular.one('location-detail', location.id).customPUT(location)
-                .then(function (data) {
-                })
-            }
-        };
-        $scope.countChoculaDown = function(location){
-            if (location.voted==null){
-                location.voteCount -= 1;
-                location.voted = true;
-                delete location.photos;
-                Restangular.one('location-detail', location.id).customPUT(location)
-                .then(function (data) {
-                })
-            }
-        };
-        $scope.starLocation = function(location){
-            location.starLocation = !location.starLocation;
-            delete location.photos;
-            Restangular.one('location-detail', location.id).customPUT(location)
-                .then(function (data) {
-                    $scope.location.starLocation = data.starLocation;
-                })
-        };
-        $scope.commentList = {};
-        Restangular.all('comments-by-location').getList({'locationID':$routeParams.id})
+        var requestURI = window.location.hash.substr(2);  // then do a split to get the last value, then plug in that last value into the route params.ID (or similar variable)
+        var requestURIarray = requestURI.split("/");
+        var jobId = requestURIarray[1];
+        Restangular.all('job').getList()
             .then(function (data) {
-                $scope.commentList = data;
+                $scope.jobList = data;
+                $scope.job = $scope.jobList[jobId];
+                Restangular.all('companies').getList()
+                    .then(function (data) {
+                        $scope.company = data[$scope.job.company - 1];
+                        console.log($scope.company);
+                    });
             });
     }])
     .controller('FindJobController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
