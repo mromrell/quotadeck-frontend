@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="row">
-    <div class="col-xs-12 col-sm-3 pull-left">
+    <div class="col-xs-12 col-sm-4 pull-left">
         <div class="filterbox col-sm-12">
             <div class="list-group bs-example">
 
@@ -16,14 +16,16 @@
                 </p>
                 <hr/>
                 <br/>
-                <button type="button" ng-click="applySwitch" class="button button-white-side">Apply</button>
-                <div ng-show="apply">
-                    <p>Hello</p>
+                <div>
+                    <p><strong>Want to Apply?</strong> It's easy, just fill this out and submit.</p>
+                    <input type="text" ng-model="cost" placeholder="My Fee" class="sidebar-input">
+                    <input type="textarea" ng-model="description" placeholder="Why I can close this" class="sidebar-input-big">
+                    <button type="button" class="btn btn-primary" ng-click="submitApplication">Submit My Bid</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bs-example col-xs-12 col-sm-9 pull-right">
+    <div class="bs-example col-xs-12 col-sm-8 pull-right">
         <h1>{{ job.jobTitle }}</h1>
         <p><strong>Date Posted: </strong> {{ job.dateAdded }}</p>
        <p>{{ job.jobDescription }}</p>
