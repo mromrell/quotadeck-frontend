@@ -1,4 +1,682 @@
 <div class="container">
 
 
+<!--Core CSS -->
+    <link href="partials/theme/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <link href="partials/theme/css/clndr.css" rel="stylesheet">
+    <!--clock css-->
+    <link href="partials/theme/assets/css3clock/css/style.css" rel="stylesheet">
+    <!--Morris Chart CSS -->
+    <link rel="stylesheet" href="partials/theme/assets/morris-chart/morris.css">
+    <!-- Custom styles for this template -->
+    <link href="partials/theme/css/style.css" rel="stylesheet">
+    <link href="partials/theme/css/style-responsive.css" rel="stylesheet"/>
+
+<style type="text/css">
+.wrapper{
+    margin-top: 0px;
+    padding: 6px;
+}
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.wrapper>.row{
+    width: 118%;
+}
+ul.sidebar-menu {
+padding-top: 35px;
+}
+.wrapper {
+border-left: 0px solid #D6D6D6;
+border-right: 0px solid #D6D6D6;
+}
+.wrapper>.row:first-of-type{
+    margin-top: 20px
+}
+.corner-ribon{
+    right: 16px;
+}
+</style>
+
+
+
+
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a class="active" href="partials/theme/index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class="fa fa-th"></i>
+                        <span>Leaderboard</span>
+                    </a>
+                </li>
+                                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class="fa fa-book"></i>
+                        <span>Manage Team</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="partials/theme/index-2.html">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Manage Listings</span>
+                    </a>
+                </li>
+            
+            </ul>            </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+ <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+        <!-- page start-->
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/1.jpg">
+                                    </a>
+                                    <h1>Amy Kyong</h1>
+                                    <p>Provo, UT</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">10</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                   <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/2.jpg">
+                                    </a>
+                                    <h1>Adam Hunter</h1>
+                                    <p>Ogden, UT</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">10</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/3.jpg">
+                                    </a>
+                                    <h1>Janna Wilk</h1>
+                                    <p>Boise, ID</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">10</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/4.jpg">
+                                    </a>
+                                    <h1>Eric Clapton</h1>
+                                    <p>Baltimore, MD</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">10</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/5.jpg">
+                                    </a>
+                                    <h1>Jani Worth</h1>
+                                    <p>Los Angeles, CA</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">10</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/6.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Eli, NV</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">9</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/7.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">9</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/8.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/9.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/10.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/11.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/12.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/13.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/14.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/15.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">8</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/16.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">7</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/17.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">7</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/18.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">7</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/19.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">3</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+                    <div class="col-md-4">
+                        <!--widget start-->
+                        <aside class="profile-nav alt">
+                            <section class="panel">
+                                <div class="user-heading alt gray-bg">
+                                    <div class="corner-ribon blue-ribon">
+                                        <i class="fa fa-twitter"></i>
+                                    </div>
+                                    <a href="#">
+                                        <img alt="" src="partials/images/profiles/20.jpg">
+                                    </a>
+                                    <h1>Jim Doe</h1>
+                                    <p>Sales Expert</p>
+                                </div>
+
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="javascript:;"> <i class="fa fa-envelope-o"></i> Sales Rating <span class="badge label-success pull-right r-activity">2</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-tasks"></i> Cold calling <span class="badge label-danger pull-right r-activity">15</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-bell-o"></i> Networking <span class="badge label-success pull-right r-activity">11</span></a></li>
+                                    <li><a href="javascript:;"> <i class="fa fa-comments-o"></i> Face to face <span class="badge label-warning pull-right r-activity">3</span></a></li>
+                                </ul>
+
+                            </section>
+                        </aside>
+                        <!--widget end-->
+                    </div>
+
+                </div>
+            </div>
+        
+        </section>
+    </section>
+    <!--main content end-->
+
+</section>
+
+
+
+<!-- Placed js at the end of the document so the pages load faster -->
+<!--Core js-->
+<script src="partials/theme/js/library/jquery.js"></script>
+<script src="partials/theme/assets/jquery-ui/jquery-ui-1.10.1.custom.min.js"></script>
+<script src="partials/theme/bs3/js/bootstrap.min.js"></script>
+<script src="partials/theme/js/accordion-menu/jquery.dcjqaccordion.2.7.js"></script>
+<script src="partials/theme/js/scrollTo/jquery.scrollTo.min.js"></script>
+<script src="partials/theme/assets/jQuery-slimScroll-1.3.0/jquery.slimscroll.js"></script>
+<script src="partials/theme/js/nicescroll/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="partials/theme/assets/skycons/skycons.js"></script>
+<script src="partials/theme/assets/jquery.scrollTo/jquery.scrollTo.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="partials/theme/assets/calendar/clndr.js"></script>
+<script src="partials/cdnjs.cloudflare.com/ajax/library/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="partials/theme/assets/calendar/moment-2.2.1.js"></script>
+<script src="partials/theme/js/calendar/evnt.calendar.init.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="partials/theme/assets/jvector-map/jquery-jvectormap-us-lcc-en.js"></script>
+<script src="partials/theme/assets/gauge/gauge.js"></script>
+<!--clock init-->
+<script src="partials/theme/assets/css3clock/js/script.js"></script>
+<!--Easy Pie Chart-->
+<script src="partials/theme/assets/easypiechart/jquery.easypiechart.js"></script>
+<!--Sparkline Chart-->
+<script src="partials/theme/assets/sparkline/jquery.sparkline.js"></script>
+<!--Morris Chart-->
+<script src="partials/theme/assets/morris-chart/morris.js"></script>
+<script src="partials/theme/assets/morris-chart/raphael-min.js"></script>
+<!--jQuery Flot Chart-->
+<script src="partials/theme/assets/flot-chart/jquery.flot.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.tooltip.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.pie.resize.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.animator.min.js"></script>
+<script src="partials/theme/assets/flot-chart/jquery.flot.growraf.js"></script>
+<script src="partials/theme/js/dashboard.js"></script>
+<script src="partials/theme/js/custom-select/jquery.customSelect.min.js" ></script>
+<!--common script init for all pages-->
+<script src="partials/theme/js/scripts.js"></script>
+
+<!--script for this page-->
+
 </div>

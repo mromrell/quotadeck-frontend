@@ -67,7 +67,16 @@
 
     <!--BEGIN PAGE BODY-->
     <section class="pageBody container">
-                    
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -87,6 +96,9 @@
 .wrapper{
     margin-top: 0px;
     padding: 6px;
+}
+.pace{
+    display: none !important;
 }
 .container{
     padding-left: 0px;
@@ -109,9 +121,6 @@ border-right: 0px solid #D6D6D6;
 }
 </style>
 
-
-
-
 <!--sidebar start-->
 <aside>
     <div id="sidebar" class="nav-collapse">
@@ -119,7 +128,7 @@ border-right: 0px solid #D6D6D6;
         <div class="leftside-navigation">
             <ul class="sidebar-menu" id="nav-accordion">
                 <li>
-                    <a class="active" href="partials/theme/index.html">
+                    <a href="partials/theme/index.html">
                         <i class="fa fa-dashboard"></i>
                         <span>Dashboard</span>
                     </a>
@@ -131,7 +140,7 @@ border-right: 0px solid #D6D6D6;
                     </a>
                 </li>
                                 <li>
-                    <a href="partials/theme/index-2.html">
+                    <a class="active" href="partials/theme/index-2.html">
                         <i class="fa fa-book"></i>
                         <span>Manage Team</span>
                     </a>
@@ -148,309 +157,545 @@ border-right: 0px solid #D6D6D6;
     </div>
 </aside>
 <!--sidebar end-->
-<!--main content start-->
-<section id="main-content">
-<section class="wrapper">
 
-<!--mini statistics start-->
-<div class="row">
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <div class="gauge-canvas">
-                        <h4 class="widget-h">Monthly Sales Goal</h4>
-                        <canvas width=160 height=100 id="gauge"></canvas>
+
+
+
+
+
+
+
+
+ <!--main content start-->
+    <section id="main-content">
+        <section class="wrapper">
+        <!-- page start-->
+
+        <div class="row">
+            <div class="col-md-12">
+                <section class="panel">
+                    <div class="panel-body profile-information">
+                       <div class="col-md-3">
+                           <div class="profile-pic text-center">
+                               <img src="partials/images/profiles/1.jpg" alt=""/>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="profile-desk">
+                               <h1>Dani Anderson</h1>
+                               <span class="text-muted">Sales Expert</span>
+                               <p>
+                                   I enjoy allowing startups and large companies alike to achieve their sales goals. I know how hard it can be to run a business so leave the sales to me and you wont be disappointed.
+                               </p>
+
+                           </div>
+                       </div>
+                       <div class="col-md-3">
+                           <div class="profile-statistics">
+                               <h1>1240</h1>
+                               <p>Total Sales</p>
+                               <h1>$854,000</h1>
+                               <p>2013 Sales</p>
+                               <ul>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-facebook"></i>
+                                       </a>
+                                   </li>
+                                   <li class="active">
+                                       <a href="#">
+                                           <i class="fa fa-twitter"></i>
+                                       </a>
+                                   </li>
+                                   <li>
+                                       <a href="#">
+                                           <i class="fa fa-google-plus"></i>
+                                       </a>
+                                   </li>
+                               </ul>
+                           </div>
+                       </div>
                     </div>
-                    <ul class="gauge-meta clearfix">
-                        <li id="gauge-textfield" class="pull-left gauge-value"></li>
-                        <li class="pull-right gauge-title">Reached</li>
-                    </ul>
-                </div>
+                </section>
             </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <div class="daily-visit">
-                        <h4 class="widget-h">Daily Interests</h4>
-                        <div id="daily-visit-chart" style="width:100%; height: 100px; display: block">
-
-                        </div>
-                        <ul class="chart-meta clearfix">
-                            <li class="pull-left visit-chart-value">3233</li>
-                            <li class="pull-right visit-chart-title"><i class="fa fa-arrow-up"></i> 15%</li>
+            <div class="col-md-12">
+                <section class="panel">
+                    <header class="panel-heading tab-bg-dark-navy-blue">
+                        <ul class="nav nav-tabs nav-justified ">
+                            <li class="active">
+                                <a data-toggle="tab" href="#overview">
+                                    Overview
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#job-history">
+                                    Job History
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#contacts" class="contact-map">
+                                    Contacts
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#settings">
+                                    Settings
+                                </a>
+                            </li>
                         </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <h4 class="widget-h">Top Markets</h4>
-                    <div class="sm-pie">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="col-md-3">
-        <section class="panel">
-            <div class="panel-body">
-                <div class="top-stats-panel">
-                    <h4 class="widget-h">Daily Sales</h4>
-                    <div class="bar-stats">
-                        <ul class="progress-stat-bar clearfix">
-                            <li data-percent="50%"><span class="progress-stat-percent pink"></span></li>
-                            <li data-percent="90%"><span class="progress-stat-percent"></span></li>
-                            <li data-percent="70%"><span class="progress-stat-percent yellow-b"></span></li>
-                        </ul>
-                        <ul class="bar-legend">
-                            <li><span class="bar-legend-pointer pink"></span> Draper</li>
-                            <li><span class="bar-legend-pointer green"></span> Salt Lake</li>
-                            <li><span class="bar-legend-pointer yellow-b"></span> Provo</li>
-                        </ul>
-                        <div class="daily-sales-info">
-                            <span class="sales-count">571 </span> <span class="sales-label">Sales Made</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-</div>
-<!--mini statistics end-->
-<div class="row">
-    <div class="col-md-8">
-        <!--earning graph start-->
-        <section class="panel">
-            <header class="panel-heading">
-                Earning Graph <span class="tools pull-right">
-            <a href="javascript:;" class="fa fa-chevron-down"></a>
-            <a href="javascript:;" class="fa fa-cog"></a>
-            <a href="javascript:;" class="fa fa-times"></a>
-            </span>
-            </header>
-            <div class="panel-body">
+                    </header>
+                    <div class="panel-body">
+                        <div class="tab-content tasi-tab">
+                            <div id="overview" class="tab-pane active">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="recent-act">
+                                            <h1>Recent Activity</h1>
+                                            <div class="activity-icon terques">
+                                                <i class="fa fa-check"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2>Yesterday</h2>
+                                                <p>Sold to LockheedMartin on behalf of Boeing</p>
+                                            </div>
+                                            <div class="activity-icon red">
+                                                <i class="fa fa-beer"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="red">2 Weeks Ago</h2>
+                                                <p>Achieved <i>platinum member</i> status and is now a recommended salesperson</p>
+                                            </div>
 
-                <div id="graph-area" class="main-chart">
-                </div>
-                <div class="region-stats">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <div class="region-earning-stats">
-                                This year total earning <span>$387,844</span>
+                                            <div class="activity-icon green">
+                                                <i class="fa fa-map-marker"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="green">Last Month</h2>
+                                                <p>Trip to Los Angeles to help Longboard USA Co. sell their idea to SharkTank.</p>
+                                                <div class="loc-map">
+                                                    location map goes here
+                                                </div>
+                                            </div>
+
+                                            <div class="activity-icon yellow">
+                                                <i class="fa fa-user-md"></i>
+                                            </div>
+                                            <div class="activity-desk">
+                                                <h2 class="yellow">12 december 2013</h2>
+                                                <p>Sold a million dollar deal to H & R Block for paper on behalf of Dunder Mifflin</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="prf-box">
+                                            <h3 class="prf-border-head">work in progress</h3>
+                                            <div class=" wk-progress">
+                                                <div class="col-md-5">Nike</div>
+                                                <div class="col-md-5">
+                                                    <div class="progress  ">
+                                                        <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-danger">
+                                                            <span class="sr-only">70% Complete (success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">70%</div>
+                                            </div>
+                                            <div class=" wk-progress">
+                                                <div class="col-md-5">Amazon</div>
+                                                <div class="col-md-5">
+                                                    <div class="progress ">
+                                                        <div style="width: 57%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-success">
+                                                            <span class="sr-only">57% Complete (success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">57%</div>
+                                            </div>
+                                            <div class=" wk-progress">
+                                                <div class="col-md-5">AppRaptors</div>
+                                                <div class="col-md-5">
+                                                    <div class="progress ">
+                                                        <div style="width: 20%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-info">
+                                                            <span class="sr-only">20% Complete (success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">20%</div>
+                                            </div>
+                                            <div class=" wk-progress">
+                                                <div class="col-md-5">The Startup Building</div>
+                                                <div class="col-md-5">
+                                                    <div class="progress ">
+                                                        <div style="width: 30%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="40" role="progressbar" class="progress-bar progress-bar-warning">
+                                                            <span class="sr-only">30% Complete (success)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">30%</div>
+                                            </div>
+                                        </div>
+                                        <div class="prf-box">
+                                            <h3 class="prf-border-head">team members</h3>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="partials/images/profiles/4.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Henry Gomez</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Assign</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="partials/images/profiles/6.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Ryken Harris</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Assign</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="partials/images/profiles/8.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Tyson Erdmann</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Assign</a>
+                                                </div>
+                                            </div>
+                                            <div class=" wk-progress tm-membr">
+                                                <div class="col-md-2 col-xs-2">
+                                                    <div class="tm-avatar">
+                                                        <img src="partials/images/profiles/10.jpg" alt=""/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-xs-7">
+                                                    <span class="tm">Scott Matheson</span>
+                                                </div>
+                                                <div class="col-md-3 col-xs-3">
+                                                    <a href="#" class="btn btn-white">Assign</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="clearfix location-earning-stats">
-                                <li class="stat-divider">
-                                    <span class="first-city">$193,922</span>
-                                    Provo, UT </li>
-                                <li class="stat-divider">
-                                    <span class="second-city">$124,660</span>
-                                    Salt Lake City, UT </li>
-                                <li>
-                                    <span class="third-city">$69,262</span>
-                                    Baltimore, MD </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-5">
-                            <div id="world-map" class="vector-stat">
+                            <div id="job-history" class="tab-pane ">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="timeline-messages">
+                                            <h3>Take a Tour</h3>
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            13 January 2013
+                                                        </div>
+                                                        <div class="second bg-terques ">
+                                                            Join as Product Asst. Manager
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            10 February 2012
+                                                        </div>
+                                                        <div class="second bg-red">
+                                                            Completed Provition period and Appointed as a permanent Employee
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            2 January 2011
+                                                        </div>
+                                                        <div class="second bg-purple">
+                                                            Selected Employee of the Month
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            4 March 2010
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Got Promotion and become area manager of California
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            3 April 2009
+                                                        </div>
+                                                        <div class="second bg-yellow">
+                                                            Selected the Best Employee of the Year 2013 and was awarded
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            23 May 2008
+                                                        </div>
+                                                        <div class="second bg-terques">
+                                                            Got Promotion and become Product Manager and was transper from Branch to Head Office. Lorem ipsum dolor sit amet
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            14 June 2007
+                                                        </div>
+                                                        <div class="second bg-blue">
+                                                            Height Sales scored and break all of the previous sales record ever in the company. Awarded
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                            <!-- Comment -->
+                                            <div class="msg-time-chat">
+                                                <div class="message-body msg-in">
+                                                    <span class="arrow"></span>
+                                                    <div class="text">
+                                                        <div class="first">
+                                                            1 January 2006
+                                                        </div>
+                                                        <div class="second bg-green">
+                                                            Take 15 days leave for his wedding and Honeymoon & Christmas
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /comment -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="contacts" class="tab-pane ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="prf-contacts">
+                                            <h2> <span><i class="fa fa-map-marker"></i></span> location</h2>
+                                            <div class="location-info">
+                                                <p>Postal Address<br>
+                                                    PO Box 16122 Collins Street West<br>
+                                                    Victoria 8007 Australia</p>
+                                                <p>Headquarters<br>
+                                                    121 King Street, Melbourne<br>
+                                                    Victoria 3000 Australia</p>
+                                            </div>
+                                            <h2> <span><i class="fa fa-phone"></i></span> contacts</h2>
+                                            <div class="location-info">
+                                                <p>Phone    : +61 3 8376 6284 <br>
+                                                    Cell        : +61 3 8376 6284</p>
+                                                <p>Email        : david@themebucket.net<br>
+                                                    Skype       : david.rojormillan</p>
+                                                <p>
+                                                    Facebook    : https://www.facebook.com/themebuckets <br>
+                                                    Twitter : https://twitter.com/theme_bucket
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div id="map-canvas"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="settings" class="tab-pane ">
+                                <div class="position-center">
+                                    <div class="prf-contacts sttng">
+                                        <h2>  Personal Information</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label"> Avatar</label>
+                                            <div class="col-lg-6">
+                                                <input type="file" id="exampleInputFile" class="file-pos">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Company</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="c-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Lives In</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="lives-in" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Country</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="country" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Description</label>
+                                            <div class="col-lg-10">
+                                                <textarea rows="10" cols="30" class="form-control" id="" name=""></textarea>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2> socail networks</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Facebook</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="fb-name" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Twitter</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="twitter" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Google plus</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="g-plus" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Flicr</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="flicr" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Youtube</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="youtube" class="form-control">
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                    <div class="prf-contacts sttng">
+                                        <h2>Contact</h2>
+                                    </div>
+                                    <form role="form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 1</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr1" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Address 2</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="addr2" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Phone</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="phone" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Cell</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="cell" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Email</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="email" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-2 control-label">Skype</label>
+                                            <div class="col-lg-6">
+                                                <input type="text" placeholder=" " id="skype" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="col-lg-offset-2 col-lg-10">
+                                                <button class="btn btn-primary" type="submit">Save</button>
+                                                <button class="btn btn-default" type="button">Cancel</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
+        </div>
+        <!-- page end-->
         </section>
-        <!--earning graph end-->
-    </div>
-    <div class="col-md-4">
-        <!--widget graph start-->
-        <section class="panel">
-            <div class="panel-body">
-                <div class="monthly-stats pink">
-                    <div class="clearfix">
-                        <h4 class="pull-left"> February 2014</h4>
-                        <!-- Nav tabs -->
-                        <div class="btn-group pull-right stat-tab">
-                            <a href="#line-chart" class="btn stat-btn active" data-toggle="tab"><i class="ico-stats"></i></a>
-                            <a href="#bar-chart" class="btn stat-btn" data-toggle="tab"><i class="ico-bars"></i></a>
-                        </div>
-                    </div>
-                    <!-- Tab panes -->
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="line-chart">
-                            <div class="sparkline" data-type="line" data-resize="true" data-height="75" data-width="90%" data-line-width="1" data-min-spot-color="false" data-max-spot-color="false" data-line-color="#ffffff" data-spot-color="#ffffff" data-fill-color="" data-highlight-line-color="#ffffff" data-highlight-spot-color="#e1b8ff" data-spot-radius="3" data-data="[100,200,459,234,600,800,345,987,675,457,765]">
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="bar-chart">
-                            <div class="sparkline" data-type="bar" data-resize="true" data-height="75" data-width="90%" data-bar-color="#d4a7f5" data-bar-width="10" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="circle-sat">
-                    <ul>
-                        <li class="left-stat-label"><span class="sell-percent">60%</span><span>Direct Sell</span></li>
-                        <li><span class="epie-chart" data-percent="45">
-                        <span class="percent"></span>
-                        </span></li>
-                        <li class="right-stat-label"><span class="sell-percent">40%</span><span>Channel Sell</span></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <!--widget graph end-->
-        <!--widget graph start-->
-        <section class="panel">
-            <div class="panel-body">
-                <ul class="clearfix prospective-spark-bar">
-                    <li class="pull-left spark-bar-label">
-                        <span class="bar-label-value"> $18,887</span>
-                        <span>Projected Sales</span>
-                    </li>
-                    <li class="pull-right">
-                        <div class="sparkline" data-type="bar" data-resize="true" data-height="40" data-width="90%" data-bar-color="#f6b0ae" data-bar-width="5" data-data="[300,200,500,700,654,987,457,300,876,454,788,300,200,500,700,654,987,457,300,876,454,788]"></div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!--widget graph end-->
-
-    </div>
-</div>
-<!--mini statistics start-->
-<div class="row">
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon orange"><i class="fa fa-gavel"></i></span>
-            <div class="mini-stat-info">
-                <span>320</span>
-                New Order Received
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon tar"><i class="fa fa-tag"></i></span>
-            <div class="mini-stat-info">
-                <span>22,450</span>
-                Copy Sold Today
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon pink"><i class="fa fa-money"></i></span>
-            <div class="mini-stat-info">
-                <span>34,320</span>
-                Dollar Profit Today
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="mini-stat clearfix">
-            <span class="mini-stat-icon green"><i class="fa fa-eye"></i></span>
-            <div class="mini-stat-info">
-                <span>32720</span>
-                Unique Visitors
-            </div>
-        </div>
-    </div>
-</div>
-<!--mini statistics end-->
+    </section>
+    <!--main content end-->
 
 
-<div class="row">
-     <div class="col-md-4">
-        <div class="prf-box">
-            <h3 class="prf-border-head">Top Sales People</h3>
-            <div class=" wk-progress tm-membr">
-                <div class="col-md-2 col-xs-2">
-                    <div class="tm-avatar">
-                        <img src="partials/theme/images/lock_thumb.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-7 col-xs-7">
-                    <span class="tm">John Boltana - $27,180</span>
-                </div>
-                <div class="col-md-3 col-xs-3">
-                    <a href="#" class="btn btn-white">Reward</a>
-                </div>
-            </div>
-            <div class=" wk-progress tm-membr">
-                <div class="col-md-2 col-xs-2">
-                    <div class="tm-avatar">
-                        <img src="partials/theme/images/avatar-mini-2.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-7 col-xs-7">
-                    <span class="tm">Bryn Willis - $20,085</span>
-                </div>
-                <div class="col-md-3 col-xs-3">
-                    <a href="#" class="btn btn-white">Reward</a>
-                </div>
-            </div>
-            <div class=" wk-progress tm-membr">
-                <div class="col-md-2 col-xs-2">
-                    <div class="tm-avatar">
-                        <img src="partials/theme/images/avatar-mini-3.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-7 col-xs-7">
-                    <span class="tm">Eric Schmidt - $15,035</span>
-                </div>
-                <div class="col-md-3 col-xs-3">
-                    <a href="#" class="btn btn-white">Reward</a>
-                </div>
-            </div>
-            <div class=" wk-progress tm-membr">
-                <div class="col-md-2 col-xs-2">
-                    <div class="tm-avatar">
-                         <img src="partials/theme/images/lock_thumb.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-7 col-xs-7">
-                    <span class="tm">Amy Stamos - $14,300</span>
-                </div>
-                <div class="col-md-3 col-xs-3">
-                    <a href="#" class="btn btn-white">Reward</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-8">
-        <div class="event-calendar clearfix">
-            <div class="col-lg-7 calendar-block">
-                <div class="cal1 ">
-                </div>
-            </div>
-            <div class="col-lg-5 event-list-block">
-                <div class="cal-day">
-                    <span>Today</span>
-                    Friday
-                </div>
-                <ul class="event-list">
-                    <li>Lunch with John @ 3:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Coffee meeting with Lisa @ 4:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Skype conference with patrick @ 5:45 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Introduction @ 7:00 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
-                    <li>Sales pitch with daniel @ 9:30 <a href="#" class="event-close"><i class="ico-close2"></i></a></li>
 
-                </ul>
-                <input type="text" class="form-control evnt-input" placeholder="NOTES">
-            </div>
-        </div>
-    </div>
-</div>
 
-</section>
-</section>
-<!--main content end-->
-</section>
+
 
 
 
@@ -496,16 +741,6 @@ border-right: 0px solid #D6D6D6;
 <script src="partials/theme/js/scripts.js"></script>
 
 <!--script for this page-->
-
-
-
-
-
-
-
-
-
-
 
 
 
