@@ -6,7 +6,7 @@ angular.module('roApp.controllers', [])
     .controller('BaseController', ['$scope', '$window', 'brand', 'SessionService', function($scope, $window, brand, SessionService) {
         $scope.brand = brand;
         $scope.session = SessionService.getSession();
-        console.log($scope.session);
+//        console.log($scope.session);
         $scope.$on('event:login-confirmed', function() {
             console.log('event has been broadcast to Home Controller');
             $scope.session = SessionService.getSession();
@@ -18,14 +18,7 @@ angular.module('roApp.controllers', [])
         };
     }])
     .controller('HomeController', ['$scope', 'SessionService', function($scope, SessionService) {
-//        $scope.session = SessionService.getSession();
-//
-//        $scope.user = {};
-//
-//        $scope.$on('event:login-confirmed', function() {
-//            console.log('event has been broadcast to Home Controller');
-//            $scope.session = SessionService.getSession();
-//        });
+
     }])
     .controller('UserCreateController', ['$scope', '$window', 'Restangular', 'SessionService', function($scope, $window, Restangular, SessionService) {
         $scope.createUser = function(user) {
@@ -37,7 +30,7 @@ angular.module('roApp.controllers', [])
                 user.last_login = data.last_login;
                 user.stats = 'Active';
                 user.username = data.username;
-                console.log('Token: ' + JSON.stringify(data));
+//                console.log('Token: ' + JSON.stringify(data));
 
                 SessionService.saveSession(data.auth_token);
 
@@ -48,7 +41,6 @@ angular.module('roApp.controllers', [])
 //                if (data.data.errors.hasOwnProperty('email')) {
 //                    console.log(data.data.errors.email[0]);
 //                }
-                console.log(JSON.stringify(data));
             });
         }
     }])
@@ -91,56 +83,13 @@ angular.module('roApp.controllers', [])
     // ---------------------------------------------------------------
     .controller('MyAccountProfileController', ['$scope', 'SessionService', 'Restangular', function($scope, SessionService, Restangular) {
         $scope.session = SessionService.getSession();
-        $scope.currentUserInfo = SessionService.getSession();
 
-        $scope.myLocationList = [];
-        $scope.myPaymentList = [];
-
-        if (SessionService.getUserLocations()){
-            $scope.myLocationList=SessionService.getUserLocations();
-        }
-
-        //fd.append("eventName", $scope.location.eventName);
-        Restangular.all('payment').getList()
-            .then(function (data) {
-                $scope.paymentList = data;
-                for (var i = 0; i < $scope.paymentList.length; i++){
-                    if ($scope.paymentList[i].user_id==$scope.session.id){
-                        var eventIdNum = $scope.paymentList[i].event_id - 1;
-                        var event={
-                            'eventId': $scope.paymentList[i].event_id,
-                            'eventName':$scope.myLocationList[eventIdNum].eventName,
-                            'description':$scope.myLocationList[eventIdNum].description,
-                            'eventStartDate':$scope.myLocationList[eventIdNum].eventStartDate,
-                            'totalCost':$scope.myLocationList[eventIdNum].totalCost,
-                            'payment_amount':$scope.paymentList[i].payment_amount
-                        };
-                        $scope.myPaymentList.push(event);
-                    }
-                }
-
-                console.log($scope.paymentList);
-                console.log($scope.myPaymentList);
-            });
-
-        $scope.$on('event:login-confirmed', function() {
+        $scope.$on('event:login-confirmed', function () {
             console.log('event has been broadcast to Home Controller');
             $scope.session = SessionService.getSession();
 
-
-
-            Restangular.all('location').getList()
-            .then(function (data) {
-                $scope.locationList = data;
-                for (var i = 0; i < $scope.locationList.length; i++){
-                    if ($scope.locationList[i].user==$scope.session.id){
-                        $scope.myLocationList.push($scope.locationList[i]);
-                        console.log($scope.myLocationList);
-                    }
-                }
-                SessionService.saveUserLocations($scope.myLocationList);
-            })
         });
+        console.log($scope.session);
     }])
 
     // ---------------------------------------------------------------

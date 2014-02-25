@@ -9,16 +9,22 @@ angular.module('roApp.services', ['angularLocalStorage'])
     .factory('SessionService', function ($http, storage) {
         return {
             saveSession: function (data) {
-                storage.set('token', data);
+                storage.set('user', data);
             },
             getSession: function () {
-                return storage.get('token');
+                return storage.get('user');
             },
             removeSession: function () {
                 storage.clearAll();
             },
             isLoggedIn: function () {
-                return storage.get('token') != null;
+                return storage.get('user') != null;
+            },
+            saveToken: function(token){
+                storage.set('token', token);
+            },
+            getToken: function(){
+                return storage.get('token');
             }
         };
     });

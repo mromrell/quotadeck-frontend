@@ -130,7 +130,7 @@ var roApp = angular.module('roApp', [
 
         /* The following is for $http and Restangular token auth */
         if (SessionService.isLoggedIn()) {
-            var token = SessionService.getSession();
+            var token = SessionService.getToken();
             $http.defaults.headers.common['Authorization'] = 'Token ' + token;
         }
 
@@ -138,7 +138,7 @@ var roApp = angular.module('roApp', [
         // add Auth Token to every Restangular request
         Restangular.setFullRequestInterceptor(function(element, operation, route, url, headers, params) {
             if (SessionService.isLoggedIn()) {
-                var token = SessionService.getSession();
+                var token = SessionService.getToken();
                 headers['Authorization'] = 'Token ' + token;
             }
 
