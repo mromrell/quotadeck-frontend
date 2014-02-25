@@ -11,10 +11,10 @@ dp(document).ready(function() {
     });
 
     //SUPER SLIDES
-    dp('#home-slide').superslides({
-        animation: 'fade', // You can choose either fade or slide
-        play: 6000
-    });
+//    dp('#home-slide').superslides({
+//        animation: 'fade', // You can choose either fade or slide
+//        play: 6000
+//    });
 
     //ANIMAZE
     dp('.animaze').bind('inview', function(event, visible) {
