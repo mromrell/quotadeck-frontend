@@ -1,49 +1,73 @@
- <div class="container">
-  <!--  <div ng-hide="session">
+<div class="container">
+    <div ng-hide="session">
         <div login></div>
-    </div> -->
+    </div>
+    <div ng-show="session">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>What can I post?</h2>
+                <p>This is where you can create any sales task or job you need. Keep the listing title short and the description very detailed.</p>
+                <strong>Some examples might include:</strong>
+                <ul>
+                    <li>Need Introduction to Ford's VP of Engineering</li>
+                    <li>Sales team to open our Dallas TX Office</li>
+                    <li>Need Sales rep with solid network in the hispanic community</li>
+                    <li>Multiple Reps with online marketing sales experience</li>
+                </ul>
+                <hr/>
+                <h2>How to get the best applicants</h2>
+                <p>The more descriptive your post, the easier it will be for the right applicants to find your listing and describe to you how they are able to help</p>
+                <strong>Important details to include:</strong>
+                <ul>
+                    <li>Need Introduction to Ford's VP of Engineering</li>
+                    <li>Sales team to open our Dallas TX Office</li>
+                    <li>Need Sales rep with solid network in the hispanic community</li>
+                    <li>Multiple Reps with online marketing sales experience</li>
+                </ul>
+            </div>
 
-    <div class="row">
-        <div class="col-md-offset-4 col-md-4">
-            <h1>Sell your product</h1>
+            <div class="col-md-6">
+                <h1>Post your Sales Gig</h1>
 
-            <h3></h3>
+                <h3></h3>
 
-            <div class="mainform">
-                <form ng-submit="save()" class="form-register">
-                    <input class="form-control form-group" type="text" ng-model="newJob.listingTitle" required="required" placeholder="Listing title">
-                    <div class="form-group">
-                        <label>Product Details</label><br>
-                        <select ng-model="newJob.industry">
-                        <option value="">-- choose industry --</option>
-                        <option value="IT & Programming">IT & Programming</option>
-                        <option value="Multimedia">Design & Multimedia</option>
-                        <option value="Translation">Writing & Translation</option>
-                        <option value="Marketing">Sales & Marketing</option>
-                        <option value="Admin Support">Admin Support</option>
-                        <option value="Engineering & Manufacturing">Engineering & Manufacturing</option>
-                        <option value="Finance">Finance & Management</option>
-                        <option value="Legal">Legal</option>                    
-                      </select><br>
-                        <textarea style="margin-top:15px;" class="form-control form-group" type="text" ng-model="newJob.description" required="required" placeholder="Description" rows="5"></textarea>
-                        
-                        <input class="form-control form-group" type="text" ng-model="newJob.location" required="required" placeholder="Preferred Location">
-                        <label class="left-align">Starts on:</label>
-                        <input class="form-control form-group" type="date" ng-model="newJob.startDate" placeholder="When do you want to start?">
+                <div class="mainform well">
+                    <form ng-submit="save()" class="form-register">
+                        <input class="form-control form-group" type="text" ng-model="newJob.listingTitle" required="required" placeholder="Listing title">
+                        <div class="form-group">
+                            <label>Product Details</label><br>
+                            <select ng-model="newJob.industry">
+                            <option value="">-- choose industry --</option>
+                            <option value="IT & Programming">IT & Programming</option>
+                            <option value="Multimedia">Design & Multimedia</option>
+                            <option value="Translation">Writing & Translation</option>
+                            <option value="Marketing">Sales & Marketing</option>
+                            <option value="Admin Support">Admin Support</option>
+                            <option value="Engineering & Manufacturing">Engineering & Manufacturing</option>
+                            <option value="Finance">Finance & Management</option>
+                            <option value="Legal">Legal</option>
+                          </select><br>
+                            <textarea style="margin-top:15px;" class="form-control form-group" type="text" ng-model="newJob.description" required="required" placeholder="Description" rows="5"></textarea>
 
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control form-group" type="number" ng-model="newJob.totalCost" required="required" placeholder="Sales price of the product">
-                        <input class="form-control form-group" type="number" ng-model="newJob.commissionAmount" required="required" placeholder="Commission amount %">
-                        <input class="form-control form-group" type="text" ng-model="newJob.linkUrl" placeholder="Link to the Event Website">
-                    </div>
-                    <br/>
-                    <input type="file" ng-model="photo" onchange="angular.element(this).scope().uploadFile(this.files)"/>
-                    <div>
-                        <hr/>
-                        <button type="ng-submit" class="btn btn-success" value="Save">Create Free Listing</button>
-                    </div>
-                </form>
+                            <input class="form-control form-group" type="text" ng-model="newJob.location" required="required" placeholder="Preferred Location">
+                            <label class="left-align">Starts on:</label>
+                            <input class="form-control form-group" type="date" ng-model="newJob.startDate" placeholder="When do you want to start?">
+
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control form-group" type="number" ng-model="newJob.totalCost" required="required" placeholder="Sales price of the product">
+                            <input class="form-control form-group" type="number" ng-model="newJob.commissionAmount" required="required" placeholder="Commission amount %">
+                            <input class="form-control form-group" type="text" ng-model="newJob.linkUrl" placeholder="Link to Website">
+                        </div>
+                        <br/>
+                        <label class="left-align">Upload a Photo:</label>
+                        <input type="file" ng-model="photo" onchange="angular.element(this).scope().uploadFile(this.files)"/>
+                        <div>
+                            <hr/>
+                            <button type="ng-submit" class="btn btn-success" value="Save">Create Free Listing</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

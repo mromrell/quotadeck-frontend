@@ -107,6 +107,11 @@ var roApp = angular.module('roApp', [
                 controller: 'HomeController',
                 title: 'QuotaDeck.com'
             })
+            .when('/createUser', {
+                templateUrl: 'partials/create-user.tpl.html',
+                controller: 'UserCreateController',
+                title: 'User Create Page'
+            })
             .otherwise({
                 redirectTo: '/home'
             });

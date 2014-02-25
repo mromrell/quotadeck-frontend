@@ -67,15 +67,17 @@
                 <ul class="nav navbar-nav navbar-right">
                      <li class=""><a href="index.html#/findJob">Find Opportunities</a>
                     </li>
-                     <li class=""><a href="index.html#/createJob">Create a Sales Target</a>
+                     <li class=""><a href="index.html#/createJob">Create a Sales Job</a>
                     </li>
-                     <li class=""><a href="s-dashboard.html">Dashboard</a>
-                    </li> <!--
-                    <li class=""><a href="index.html#/createJob">How it works</a>
-                    </li> -->
+                     <li class=""><a href="s-dashboard.html">Dashboard Demo</a>
+                    </li>
                     <li><a class="nav-spacer">&nbsp;</a>
                     </li>
-                    <li><a href="index.html#/login">Login</a>
+                    <li><a href="index.html#/myAccountProfile" ng-hide="session">Login</a>
+                    </li>
+                    <li><a href="javascript:void(0);" ng-click="doLogout();" ng-show="session">Logout</a>
+                    </li>
+                    <li><a href="index.html#/createUser" ng-hide="session">Sign Up </a>
                     </li>
                 </ul>
             </div>
