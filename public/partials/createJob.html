@@ -4,7 +4,7 @@
     </div>
     <div ng-show="session">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-7 col-md-6">
                 <h2>What can I post?</h2>
                 <p>This is where you can create any sales task or job you need. Keep the listing title short and the description very detailed.</p>
                 <strong>Some examples might include:</strong>
@@ -26,14 +26,15 @@
                 </ul>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-sm-5 col-md-6">
                 <h1>Post your Sales Gig</h1>
 
                 <h3></h3>
 
                 <div class="mainform well">
                     <form ng-submit="save()" class="form-register">
-                        <input class="form-control form-group" type="text" ng-model="newJob.listingTitle" required="required" placeholder="Listing title">
+                        <input class="form-control form-group" type="text" ng-model="newJob.company" required="required" placeholder="Company Name">
+                        <input class="form-control form-group" type="text" ng-model="newJob.jobTitle" required="required" placeholder="Job Title">
                         <div class="form-group">
                             <label>Product Details</label><br>
                             <select ng-model="newJob.industry">
@@ -47,7 +48,7 @@
                             <option value="Finance">Finance & Management</option>
                             <option value="Legal">Legal</option>
                           </select><br>
-                            <textarea style="margin-top:15px;" class="form-control form-group" type="text" ng-model="newJob.description" required="required" placeholder="Description" rows="5"></textarea>
+                            <textarea style="margin-top:15px;" class="form-control form-group" type="text" ng-model="newJob.jobDescription" required="required" placeholder="Description" rows="5"></textarea>
 
                             <input class="form-control form-group" type="text" ng-model="newJob.location" required="required" placeholder="Preferred Location">
                             <label class="left-align">Starts on:</label>
@@ -56,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <input class="form-control form-group" type="number" ng-model="newJob.totalCost" required="required" placeholder="Sales price of the product">
-                            <input class="form-control form-group" type="number" ng-model="newJob.commissionAmount" required="required" placeholder="Commission amount %">
+                            <input class="form-control form-group" type="number" ng-model="newJob.commission" required="required" placeholder="Commission amount %">
                             <input class="form-control form-group" type="text" ng-model="newJob.linkUrl" placeholder="Link to Website">
                         </div>
                         <br/>

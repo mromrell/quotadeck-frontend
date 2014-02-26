@@ -105,45 +105,27 @@ angular.module('roApp.controllers', [])
 
         });
 
-        $scope.uploadFile = function (files) {
-            $scope.newJob.photos = files[0];
-
-        };
+//        $scope.uploadFile = function (files) {
+//            $scope.newJob.photos = files[0];
+//
+//        };
 
         $scope.save = function () {
 
-            var newEvent = {
-                'user': 1, //$scope.session.id,
-                'eventName': $scope.newJob.eventName,
-                'listingTitle': $scope.newJob.listingTitle,
+            var job = {
+                'company': $scope.newJob.company,
+                'user': $scope.session.id,
+                'jobTitle': $scope.newJob.jobTitle,
                 'industry': $scope.newJob.industry,
-                'description': $scope.newJob.description,
+                'description': $scope.newJob.jobDescription,
                 'location': $scope.newJob.location,
                 'startDate': $scope.newJob.startDate,
                 'totalCost': $scope.newJob.totalCost,
-                'commissionAmount': $scope.newJob.commissionAmount,
-                'linkUrl': $scope.newJob.linkUrl,
-
-
-
-                'photo': $scope.newJob.photos,
+                'commission': $scope.newJob.commission,
+                'linkUrl': $scope.newJob.linkUrl
+//                'photo': $scope.newJob.photos
             };
-
-            // Grabs the GPS coordinates if it's not already there --------------------------------------------------------------------------------->
-            if ($scope.new_event.gpsLat == null || $scope.new_event.gpsLng == null) {
-                $scope.new_event.reliableGPS = false; // determines if the coordinates were manually entered or approximated based on the city
-                var geocoder = new google.maps.Geocoder();
-                var locateMe = $scope.new_event.city + ", " + $scope.new_event.state;
-
-                var geocoderRequest = { address: locateMe };
-                geocoder.geocode(geocoderRequest, function (results, status) {
-                    $scope.geoLocater = results;
-                    $scope.new_event.gpsLng = $scope.geoLocater[0].geometry.location.e;
-                    $scope.new_event.gpsLat = $scope.geoLocater[0].geometry.location.d;
-                });
-
-            }
-            $http.post('http://localhost:8001/newevent', newEvent, {
+            $http.post('http://localhost:8001/job', job, {
 //                withCredentials: true,
                 headers: {'Content-Type': undefined },
                 transformRequest: angular.identity
