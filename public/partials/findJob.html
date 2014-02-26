@@ -34,7 +34,10 @@
             </thead>
             <tbody ng-repeat="job in jobList | filter:searchText | orderBy:predicate:reverse">
                 <tr>
-                    <td><img src="{{ job.imageLink }}" class="img-responsive center img-circle"></td>
+                    <!--
+                    <td><img src="http://localhost:8001/static/{{ job.image }}" class="img-responsive center img-circle"></td>
+                    -->
+                    <td><img src="http://quotadeck-backend.herokuapp.com/static/{{ job.image }}" class="img-responsive center img-circle"></td>
                     <td><a href="#/jobDetails/{{job.id - 1}}">{{ job.jobTitle }}</a></td>
                     <td>{{ job.company }}</td>
                     <td>{{ job.jobDescription | lenLimit100 }}</td>

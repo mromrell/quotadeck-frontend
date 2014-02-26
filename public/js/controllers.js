@@ -105,37 +105,50 @@ angular.module('roApp.controllers', [])
 
         });
 
-//        $scope.uploadFile = function (files) {
-//            $scope.newJob.photos = files[0];
-//
-//        };
+        $scope.uploadFile = function (files) {
+            $scope.newJob.image = files[0];
+
+        };
 
         $scope.save = function () {
 
-            var job = {
-                'company': $scope.newJob.company,
-                'user': $scope.session.id,
-                'jobTitle': $scope.newJob.jobTitle,
-                'industry': $scope.newJob.industry,
-                'description': $scope.newJob.jobDescription,
-                'location': $scope.newJob.location,
-                'startDate': $scope.newJob.startDate,
-                'totalCost': $scope.newJob.totalCost,
-                'commission': $scope.newJob.commission,
-                'linkUrl': $scope.newJob.linkUrl
-//                'photo': $scope.newJob.photos
-            };
-            $http.post('http://localhost:8001/job', job, {
-//                withCredentials: true,
+            var fd = new FormData();
+            fd.append("company", $scope.newJob.company);
+            fd.append("user", $scope.session.id);
+            fd.append("jobTitle", $scope.newJob.jobTitle);
+            fd.append("industry", $scope.newJob.industry);
+            fd.append("jobDescription", $scope.newJob.jobDescription);
+            fd.append("location", $scope.newJob.location);
+            fd.append("startDate", $scope.newJob.startDate);
+            fd.append("totalCost", $scope.newJob.totalCost);
+            fd.append("commission", $scope.newJob.commission);
+            fd.append("linkUrl", $scope.newJob.linkUrl);
+            fd.append("image", $scope.newJob.image);
+
+//            var job = {
+//                'company': $scope.newJob.company,
+//                'user': $scope.session.id,
+//                'jobTitle': $scope.newJob.jobTitle,
+//                'industry': $scope.newJob.industry,
+//                'description': $scope.newJob.jobDescription,
+//                'location': $scope.newJob.location,
+//                'startDate': $scope.newJob.startDate,
+//                'totalCost': $scope.newJob.totalCost,
+//                'commission': $scope.newJob.commission,
+//                'linkUrl': $scope.newJob.linkUrl,
+//                'image': $scope.newJob.image
+//            };
+
+            $http.post('http://quotadeck-backend.herokuapp.com/job', fd, {
+//            $http.post('http://localhost:8001/job', fd, {
+                withCredentials: true,
                 headers: {'Content-Type': undefined },
                 transformRequest: angular.identity
             }).success(function (response) {
-                $window.location = 'index.html#/accountProfile';
+                $window.location = 'index.html#/home';
             }).error(function (response) {
                 console.log('Response: ' + response);
             });
-
-
         }
     }])
 
@@ -158,6 +171,10 @@ angular.module('roApp.controllers', [])
                         console.log($scope.company);
                     });
             });
+        Restangular.one('uploadedimages', $routeParams.id).customGET()
+            .then(function (photo_url) {
+                $scope.photo_url = photo_url[0];
+        });
         $scope.apply = false;
         $scope.applySwitch = function (){
             if ($scope.apply==false){
@@ -201,6 +218,21 @@ angular.module('roApp.controllers', [])
 
                     });
             });
+
+        // This NEEDS to be Edited to work. (brought over from PlacerApp)
+        // allows multiple images to show up on the Findjob Page
+        $scope.imagefinder = function () {
+            for (var i = 0; i < $scope.locationList.length; i++) {
+                Restangular.one('uploadedimages', $scope.locationList[i].id).customGET()
+                    .then(function (photo_url) {
+                        for (var j = 0; j < $scope.locationList.length; j++) {
+                            if ($scope.locationList[j].id == photo_url[1]) {
+                                $scope.locationList[j].photo_url = photo_url[0];
+                            }
+                        }
+                    });
+            }
+        };
     }])
     .controller('browseApplicantsController', ['$scope', '$http', 'SessionService', 'Restangular', '$routeParams', function ($scope, $http, SessionService, Restangular, $routeParams) {
 

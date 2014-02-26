@@ -6,7 +6,7 @@
             <div class="list-group bs-example">
 
                 <hr/>
-                <img src="{{ company.imageLink }}" width="175px" class="img-responsive center">
+                <img src="{{ company.image }}" width="175px" class="img-responsive center">
                 <br/>
                 <div class="text-center">
                 <h4>{{ company.companyName }}</h4>
@@ -37,7 +37,10 @@
         <br/>
 
        <p>{{ job.jobDescription }}</p>
-        <img src="{{ job.imageLink }}" width="auto" class="img-responsive center">
+        <!--
+        <img src="http://localhost:8001/static/{{ job.image }}" width="auto" class="img-responsive center">
+        -->
+        <img src="http://quotadeck-backend.herokuapp.com/static/{{ job.image }}" width="auto" class="img-responsive center">
     </div>
 
     </div>

@@ -490,7 +490,7 @@
             } // end drawPie function
         } // end draw function
 
-        // Placed here because it needs to be accessed from multiple locations
+        // Placed here because it needs to be accessed from multiple uploaded
         function drawDonutHole(layer)
         {
             // draw donut hole
